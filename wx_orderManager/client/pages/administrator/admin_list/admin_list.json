@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "navigationBarTitleText": "管理员",
+  "usingComponents": {
+    "i-checkbox-group": "../../../iview/message/index",
+    "i-checkbox": "../../../iview/checkbox/index"
+}
+}

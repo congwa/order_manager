@@ -1,0 +1,25 @@
+<view class='container'>
+  <view class='register_info'>
+    <text>银行</text>
+     <input type='text' disabled="true" value='{{bank_name}}' bindinput="setBank"></input>
+  </view>
+  <view class='register_info'>
+    <text>银行卡开户地</text>
+    <input type='text' disabled="true"  value='{{bank_open_address}}' bindinput="setBankArea"></input>
+  </view>
+  <view class='register_info'>
+    <text>银行卡开户行</text>
+    <input type='number' disabled="true" value="{{bank_open_name}}" placeholder='{{bank_open_name}}' value='大兴支行'  bindinput="setBankAreaDetail"></input>
+  </view>
+  <view class='register_info'>
+    <text>银行卡卡号</text>
+  
+      <input type='text' disabled="true" value="{{bank_number}}" placeholder='{{bank_number}}'   bindinput="setBankNumber"></input>
+
+  </view>
+  <view class='register_info'>
+    <text>持卡人姓名</text>
+    <input type='text' disabled="true" placeholder='' value='{{bank_number_name}}' bindinput="setName"></input>
+  </view>
+  <button class='btn' bindtap='goWithdraw'>编辑</button>
+</view>

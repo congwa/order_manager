@@ -1,0 +1,107 @@
+page{
+  background: #f5f5f5;
+}
+.container{
+  background: #f5f5f5;
+}
+.certificate_con{
+ width: 92%;
+ margin: 0 auto;
+ display: flex;
+ justify-content: space-between;
+
+}
+.certificate_con span{
+  font-size: 30rpx;
+	color: #333333;
+}
+
+.certificate_con .certificate_main{
+  width: 100%;
+  
+}
+.certificate_con .certi_tit{
+  width: 139rpx;
+  /* margin-bottom: 34rpx; */
+  text-align: center;
+  font-size: 28rpx;
+	color: #999999;
+  padding: 30rpx;
+}
+.cer_part{
+  margin-bottom: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+.img_con{
+  width:462rpx;
+  padding: 30rpx 0;
+  /* border-bottom:1rpx solid #ddd; */
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.img_right{
+  width: 259rpx;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.img_con .imgs image{
+  width: 100rpx;
+	height: 100rpx;
+}
+.img_con .imgs image:first-of-type{
+  border: 1rpx solid #ddd;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+.img_con text{
+  display: block;
+  width: 100%;
+  font-size: 28rpx;
+	color: #666;
+  text-align: left;
+}
+.img_con view{
+  font-size: 24rpx;
+	color: #666666;
+ 
+}
+.img_con button{
+  width: 160rpx;
+	height: 48rpx;
+	line-height: 48rpx;
+	background:	#ff6b12;
+  font-size: 28rpx;
+	color: #ffffff;
+  
+}
+.btn_con{
+  width: 92%;
+  height: 80rpx;
+  margin: 20rpx auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.btn_con button{
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  font-size: 30rpx;
+  	border-radius: 5rpx;
+    border: none;
+    background: #ff6b12;
+    width: 416rpx;
+}
+.btn_con button:first-of-type{
+  width: 246rpx;
+  background: #47cacc;
+}
+button.btn{
+  margin-bottom: 50rpx;
+}

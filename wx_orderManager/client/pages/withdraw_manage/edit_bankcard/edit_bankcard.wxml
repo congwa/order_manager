@@ -1,0 +1,24 @@
+<view class='container'>
+  <view class='register_info'>
+    <text>银行:</text>
+    <view>{{list.bank_name}}</view>
+  </view>
+  <view class='register_info'>
+    <text>银行卡开户地:</text>
+   <view>{{list.bank_open_address}}</view>
+  </view>
+  <view class='register_info'>
+    <text>银行卡开户行:</text>
+    <view>{{list.bank_open_name}}</view>
+  </view>
+  <view class='register_info'>
+    <text>银行卡卡号:</text>
+     <view>{{list.bank_number}}</view>
+
+  </view>
+  <view class='register_info'>
+    <text>持卡人姓名:</text>
+      <view>{{list.bank_number_name}}</view>
+  </view>
+  <button class='btn' data-id="{{list.id}}" bindtap='goSecondEnter'>编辑</button>
+</view>

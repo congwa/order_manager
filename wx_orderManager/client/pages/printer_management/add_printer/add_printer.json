@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "添加打印机",
+    "usingComponents": {
+        "i-toast": "../../../iview/toast/index"
+    }
+}
+
+   

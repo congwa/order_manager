@@ -1,0 +1,8 @@
+<view class='container'>
+  <view class='title'>公告</view>
+  <view class="review_text">
+    <textarea value="{{text}}" placeholder="本店开业大酬宾，线上下单满300减50，满500减80，快快下单吧！" placeholder-style="color:#999;" bindinput='changeText' maxlength='50'></textarea>
+    <text>最多不得超过{{maxlength-text.length}}个字</text>
+  </view>
+  <button class='btn' bindtap="submit">确定</button>
+</view>

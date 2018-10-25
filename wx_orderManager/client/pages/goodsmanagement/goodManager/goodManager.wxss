@@ -1,0 +1,30 @@
+/* pages/goodManager/goodManager.wxss */
+
+.good{
+    width: 692rpx;
+	height: 328rpx;
+	background-color: #ffffff;
+	border-radius: 5px;
+    opacity: 0.6;
+    position: relative;
+    margin:29rpx;
+}
+.good-img{
+    width: 100%;
+    height: 100%;
+}
+.con-img{
+    width: 110rpx;
+	height: 110rpx;
+}
+.con{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+
+.text{
+    font-size: 28rpx;
+    color:#fff;
+}

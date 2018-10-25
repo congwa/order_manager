@@ -1,0 +1,98 @@
+<view class='container'>
+  <view class='withdraw_title'>提现到银行卡
+    <text bindtap='goCheckCard'>银行卡</text>
+  </view>
+  <view class='withdraw_con'>
+    <view class='con_title'>
+      <text>提现金额</text>
+      <view bindtap='operateRule'>
+        <image src='../../../img/rule.png'></image> 规则
+      </view>
+    </view>
+
+    <view class='mounts_con'>
+      <span>¥</span>
+      <input type='digit' focus='true' value='{{giveAll?total_num:" "}}' bindinput='patternValue'></input>
+    </view>
+    <view class='top_info' wx:if="{{!isSurpass}}">账户余额¥{{total_num}}，
+      <text>额外扣除¥{{money*(monyDes[type])}}手续费,(费率{{type==1?"0.9":"1"}}％)</text>
+    </view>
+    <view class='top_info info_disable' wx:if="{{isSurpass}}">{{warnText[warnIndex]}}</view>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio">
+        <radio value="2" checked='' color='#169bd5' />提现至银行卡
+      </label>
+      <label class="radio">
+        <radio value="1" checked='true' color='#169bd5' />提现至微信零钱账户
+      </label>
+    </radio-group>
+    <button class='withdraw_btn' data-ty='{{disabled?1:2}}' type="{{buttonType}}" disabled="{{disabled}}" bindtap='goWithdraw'>同意协议并提现</button>
+    <view class='top_info info'>点击按钮即同意
+      <text bindtap='goWeb1'>《微信支付服务协议》</text>和
+      <text bindtap="goWeb2">《微信支付商户平台使用协议》</text>，仅限工作日进行提现申请。
+    </view>
+  </view>
+</view>
+<view class='container record_con'>
+  <scroll-view class="" scroll-y bindscrolltolower="scrolltolower">
+    <view wx:for="{{list}}"  class='record_part'>
+      <view class='rec_top'>
+        <view class='rec_top_left' wx:if="{{item.type==1}}">
+          <image src='../../../img/wechat.png'></image>
+          <text>微信</text>
+        </view>
+         <view class='rec_top_left' wx:if="{{item.type==2}}"> 
+            <image src='../../../img/card.png'></image>
+            <text>银行卡</text>
+        </view>
+        <view class='btn_con'>
+          <span> {{tState[item.status]}}</span>
+          <text bindtap='cancle' wx:if="{{item.status==2}}" data-id='{{item.id}}'>取消</text>
+        </view>
+      </view>
+      <view class='rec_middle'>
+        <text>提现总额：{{item.total_money}}</text>
+        <text>手续费：{{item.cmms_amt}}</text>
+      </view>
+      <view class='rec_bottom'>
+        <text>到账金额：{{item.money}}</text>
+        <span>{{item.create_time}}  </span>
+      </view>
+    </view>
+  </scroll-view>
+
+</view>
+
+
+<view class="mask" wx:if="{{nvisible}}">
+  <view class="maskContent trueInfo">
+    <view class="maskclose" bindtap="maskclose">X</view>
+    <view class="title">提现绑定微信账号: {{wxname}}</view>
+    <view class="name">提现微信用户真实姓名</view>
+    <input class="input" value="" placeholder="请输入姓名" bindinput="setTrueName"></input>
+    <button bindtap="submitTrueName" class="submit btn">提交</button>
+  </view>
+</view>
+
+
+<view class="mask" wx:if="{{rulevisible}}">
+  <view class="maskContent">
+    <view class="maskclose" bindtap="operateRule">X</view>
+    <view class="title">微信提现规则</view>
+    <view class="name">由于微信企业付款手续费及额度限制，同一实名微信用户单笔单日
+      <text>限额20000元</text>，同一银行卡单笔单日
+      <text>限额50000元</text>。同时，为了防止用户提现手续费的损失，小橘规定每笔提现金额<text>不得小于500元</text>。</view>
+  </view>
+</view>
+
+
+<view class="mask cancle" wx:if="{{iscancle}}">
+  <view class="maskContent">
+    <view class="maskclose" bindtap="cancle">✖</view>
+    <view class="title">您的提现申请真的需要取消？</view>
+    <view class='btn_con'>
+      <button class='btn' bindtap='cancleWithDraw'>确定</button>
+      <button class='btn' bindtap="cancle">取消</button>
+    </view>
+  </view>
+</view>

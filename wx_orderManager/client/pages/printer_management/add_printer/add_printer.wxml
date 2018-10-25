@@ -1,0 +1,48 @@
+<i-toast id="toast" />
+
+<view class='container'>
+  <view class='register_info'>
+    <text>品 牌：</text>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio" >
+        <radio value="1" checked="" color='#169bd5'/>飞鹅
+      </label>
+       <label class="radio" >
+        <radio value="2" checked="" color='#169bd5'/>易联运
+      </label>
+    </radio-group>
+  </view>
+    <view class='register_info'>
+    <text>链接方式：</text>
+    <radio-group class="radio-group" bindchange="radioChange2">
+      <label class="radio" >
+        <radio value="1" checked="" color='#169bd5'/>WIFI
+      </label>
+       <label class="radio" >
+        <radio value="2" checked="" color='#169bd5'/>GPRS
+      </label>
+    </radio-group>
+  </view>
+  <view class='register_info'>
+    <text>打印份数</text>
+    <input type='number' placeholder='请输入打印份数' bindinput="setNumber" maxlength='20'></input>
+  </view>
+  <view class='register_info'>
+    <text>标题</text>
+    <input type='text' placeholder='' bindinput="setTitle"></input>
+  </view>
+  <view class='register_info'>
+    <text>打印机秘钥</text>
+    <input type='text' placeholder='' bindinput="setKey"></input>
+  </view>
+  <view class='register_info'>
+    <text>打印机终端号或编号</text>
+    <input type='text' placeholder='' class='introduce' bindinput="setSn" ></input>
+  </view>
+   <view class='register_info'>
+    <text>手机号</text>
+    <input type='number' placeholder='' bindinput="setIphone" maxlength='11'></input>
+  </view>
+  
+</view>
+<button class='sub_info btn' bindtap='goEdit'>保存</button>

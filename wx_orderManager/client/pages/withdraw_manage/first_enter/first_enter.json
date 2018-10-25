@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "添加银行卡",
+  "component": true,
+  "usingComponents": {
+    "i-toast": "../../../iview/toast/index"
+  }
+}

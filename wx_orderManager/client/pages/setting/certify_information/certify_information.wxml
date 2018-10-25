@@ -1,0 +1,64 @@
+<view class='container'>
+  <view class='certificate_con'>
+    <view class='certificate_main'>
+      <view class='cer_part'>
+        <view class='certi_tit'>身份证
+          <br/>（正面）</view>
+        <view class='img_con'>
+          <view class='imgs'>
+            <image bindtap="bindCerF" src='{{idFront ?idFront : "../../../img/camera.png"}}' class='shopimg'></image>
+          </view>
+          <view class='img_right'>
+            <text>上传图片</text>
+            <view>（建议尺寸:180x180px）</view>
+            <button bindtap="delFront" data-func="cerF">删除图片</button>
+          </view>
+
+        </view>
+      </view>
+      <view class='cer_part'>
+        <view class='certi_tit'>身份证
+          <br/>（反面）</view>
+        <view class='img_con'>
+          <view class='imgs'>
+            <image bindtap="bindCerR" src='{{idBack?idBack : "../../../img/camera.png"}}' class='shopimg'></image>
+          </view>
+
+          <view class='img_right'>
+            <text>上传图片</text>
+            <view>（建议尺寸:180x180px）</view>
+            <button bindtap="delBack" data-func="cerF">删除图片</button>
+          </view>
+        </view>
+      </view>
+      <view class='cer_part'>
+        <view class='certi_tit'>营业执照 / 特许证件（任选其一）</view>
+        <view class='img_con'>
+          <view class='imgs'>
+            <image bindtap="bindCerL" src='{{license?license : "../../../img/camera.png"}}' class='shopimg'></image>
+          </view>
+          <view class='img_right'>
+            <text>上传图片</text>
+            <view>（建议尺寸:180x180px）</view>
+            <button bindtap="delLis" data-func="cerF">删除图片</button>
+          </view>
+        </view>
+      </view>
+      <view class='cer_part'>
+        <view class='certi_tit'>食品经营许可证 / 餐饮服务许可证 / 食品流通许可证 / 其它（任选其一）</view>
+        <view class='img_con'>
+          <view class='imgs'>
+            <image bindtap="bindCerP" src='{{certify?certify : "../../../img/camera.png"}}' class='shopimg'></image>
+          </view>
+          <view class='img_right'>
+            <text>上传图片</text>
+            <view>（建议尺寸:180x180px）</view>
+            <button bindtap="delPermit" data-func="cerF">删除图片</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
+<button class='btn' bindtap='goSub'>保存</button>

@@ -1,0 +1,10 @@
+<view class="good">
+    <image class="good-img" src="../../../img/printer.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+        
+    </image>
+    <view class="con" bindtap='goCreat'>
+        <image class="con-img" src="../../../img/plus.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+        </image>
+        <view class="text">添加打印机</view>
+    </view>
+</view>

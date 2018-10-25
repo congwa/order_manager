@@ -1,0 +1,34 @@
+<view class='container'>
+  <view class='register_info'>
+    <text>商家名称</text>
+    <input type='text' placeholder='' bindinput='changeName'></input>
+  </view>
+  <view class='register_info' bindtap='init'>
+    <text>商家地址</text>
+    <input class='address_con' type='text' placeholder='' value='{{address}}'></input>
+  </view>
+  <view class='register_info'>
+    <text>联系电话</text>
+    <input type='number' placeholder='' maxlength='11' bindinput='changePhone'></input>
+  </view>
+  <view class='register_info'>
+    <text>联系人</text>
+    <input type='text' placeholder='' bindinput='changeLinkman'></input>
+  </view>
+  <view class='info_img'>
+    <text>营业执照/特许证件</text>
+    <view class="upload_pic">
+      <view class="upload_btn" bindtap="licenseChange">
+        <image  src='{{license ?license : "../../img/camera.png"}}'></image>
+      </view>
+      <view class="tip_text" bindtap="licenseChange">
+        <text>上传图片</text>
+      </view>
+    </view>
+    <!--图片复现的容器-->
+    <view class="show_pic">
+      <image wx:for="{{previewSrcs}}" wx:key="*this" src="{{PROJECT_ROOT+item}}" style="width:100rpx;height:100rpx"></image>
+    </view>
+  </view>
+  <button class='sub_info' bindtap='goMain'>提交</button>
+</view>

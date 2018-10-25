@@ -1,0 +1,38 @@
+
+<view wx:if="{{loading}}" class="container">
+    <i-spin fix></i-spin>
+</view>
+
+
+<view class="page">
+    <view class="page__hd">
+        <button bindtap='showedit'>{{edittitle}}</button>
+    </view>
+    <view class="page__bd">
+        <view class="weui-grids">
+            <block  wx:for="{{grids}}"   wx:key="*this" wx:index="index">
+                <navigator bindtap='select' data-idx='{{index}}' data-id='{{item.id}}' url="" class="weui-grid" hover-class="weui-grid_active">
+                    <image class='empty_select' src='../../../img/duigou1.png' data-idx='{{index}}' data-id='{{item.id}}' wx:if="{{editflag}}" ></image>
+                    <image class='empty_select select' src='../../../img/duigou2.png' data-idx='{{index}}' data-id='{{item.id}}' wx:if="{{item.selectflag}}"></image>
+                    <image class="weui-grid__icon" src="{{item.img}}" />
+                    <view class="weui-grid__label">{{item.title}}</view>
+                </navigator>
+            </block>
+        </view>
+    </view>
+</view>
+
+
+<view class="add-con"  hidden='{{editflag}}'>
+    <view class="go_btn">
+       <navigator url="/pages/main/main" open-type="reLaunch" hover-class="other-navigator-hover">返回首页</navigator>
+    </view>
+    <view class='add_btn' bindtap='addImgs'>
+        <image src='../../../img/plus_orange.png' bindtap="addImgs"></image>
+        添加相册
+    </view>
+</view>
+<view class='edt_btn' wx:if='{{editflag}}'>
+ <button bindtap="imgsSelect">全选</button>
+ <button bindtap="imgsDel">删除</button>
+</view>

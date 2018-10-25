@@ -1,0 +1,58 @@
+page{
+  background: #f5f5f5;
+}
+.authority{
+  width: 92%;
+  margin: 20rpx auto;
+  background: #fff;
+}
+.authority .auth_title{
+  text-align: center;
+  font-size: 30rpx;
+	color: #333333;
+  padding: 32rpx 0;
+  border-bottom: 1rpx solid #ddd;
+}
+.auth_con{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 17rpx;
+  box-sizing: border-box;
+}
+.auth_con .auth_part{
+  width: 28.9%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+	color: #666666;
+  text-align: center;
+  background: #f5f5f5;
+ margin-bottom: 20rpx;
+ position: relative;
+ border-radius: 3rpx;
+}
+.auth_con .auth_part:nth-of-type(3n-1){
+  margin:0 40rpx;
+}
+.auth_con .auth_part span{
+  display: block;
+  width: 30rpx;
+	height: 30rpx;
+  background: url(http://thyrsi.com/t6/369/1536650552x-1404817712.png) no-repeat center;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.active{
+  border: 2rpx solid  #169bd5; 
+  box-sizing: border-box;
+}
+.btn{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:50rpx auto;
+}

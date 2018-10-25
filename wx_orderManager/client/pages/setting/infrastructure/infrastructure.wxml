@@ -1,0 +1,9 @@
+<view class='authority'>
+    <view class='auth_title'>请选择设施</view>
+   <view class='auth_con'>
+      <view wx:for="{{rulesNames}}" data-id="{{item.id}}" data-idx="{{index}}" class="auth_part {{rules[index]?'active':''}}" bindtap="setRules" >{{item.title}}
+        <span wx:if="{{rules[index]}}"></span>
+       </view>
+    </view>
+  </view>
+  <button class='btn' bindtap='goEdit'>保存</button>

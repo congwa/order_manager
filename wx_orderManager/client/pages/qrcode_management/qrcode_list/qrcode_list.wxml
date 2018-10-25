@@ -1,0 +1,72 @@
+<view wx:if="{{loading}}" class="container">
+    <i-spin fix></i-spin>
+</view>
+
+<view class='container' style="overflow:scroll;height:{{windowHeight-100}}rpx">
+   <!-- <view class='qr_part'>
+    <view class='img_con'>
+          <image src='../../../img/code_back.png'></image>
+          <image src='../../../img/code.png'></image>
+    </view>
+    <view class='qr_right'>
+       <view class='qr_tit'>橘色温暖小桌贴</view>
+       <text>08号桌</text>
+       <view class='btn_con'>
+         <button>下载</button>
+         <button>删除</button>
+       </view>
+    </view>
+   </view> -->
+
+    <view wx:for="{{list}}" class='qr_part'>
+    <view class='img_con'>
+          <image src='{{item.view_img}}'></image>
+
+    </view>
+    <!-- <view>
+       <canvas  class="img_con" width="1913px" height="1346px" canvas-id="{{'myCanvas'+ index}}" style="border: 1px solid;"/>
+    </view> -->
+    <view class='qr_right'>
+       <view class='qr_tit'>橘色温暖小桌贴</view>
+       <text>{{item.number}}号桌</text>
+       <view class='btn_con'>
+         <button bindtap="setDown" data-img="{{item.img}}" data-templet_id="{{item.templet_id}}" data-index="{{index}}" data-id="{{item.id}}">下载</button>
+         <button bindtap="setDel" data-id="{{item.id}}">删除</button>
+       </view>
+    </view>
+   </view>
+
+</view>
+
+
+<view class="add-con">
+ <view class="go_btn">
+   <navigator url="/pages/main/main" open-type="reLaunch" hover-class="other-navigator-hover">返回首页</navigator>
+  </view>
+<view class='add_btn' bindtap='goCreat' >
+  <image src='../../../img/plus_orange.png'></image>添加二维码
+</view>
+</view>
+
+
+
+
+<!-- <view class='container'>
+   <view wx:for="{{list}}" class='qr_part'>
+    <view class='img_con'>
+          <image src='{{item.img}}'></image>
+          <image src='{{item.view_img}}'></image>
+    </view>
+    <view class='qr_right'>
+       <view class='qr_tit'>橘色温暖小桌贴</view>
+       <text>08号桌</text>
+       <view class='btn_con'>
+         <button data-id="{{item.id}}" data-number="{{item.number}}" data-templetid="{{templet_id}}" bindtap="setDown">下载</button>
+         <button data-id="{{item.id}}" data-number="{{item.number}}" data-templetid="{{templet_id}}" bindtap="setDel">删除</button>
+       </view>
+    </view>
+   </view>
+
+</view>
+<view class='add_btn' bindtap='goCreat' >
+<image src='../../../img/plus_orange.png'></image>添加二维码</view> -->

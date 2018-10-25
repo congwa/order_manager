@@ -1,0 +1,32 @@
+
+
+
+<view wx:if="{{show}}" class="mask">
+  <view class="mask-con">
+    <view  style="">
+      <!-- <open-data type="userAvatarUrl" ></open-data> -->
+      <!-- <open-data type="userNickName" style="font-size:30rpx; margin-left:70rpx"></open-data>  -->
+      <image src='../../../img/logo.png'></image>
+      <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" style="font-size:30rpx;">授权登录</button>
+        <!-- <button open-type="getPhoneNumber" bindgetphonenumber="bindGetUserInfo" >授权登录</button> -->
+      <view wx:else>请升级微信版本</view>
+    </view>
+    <!-- <span bindtap='goback'>×</span> -->
+  </view>
+</view>
+
+
+<view  wx:if="{{showNum}}" class="mask">
+  <view class="mask-con">
+    <view  style="">
+      <!-- <open-data type="userAvatarUrl" ></open-data>
+      <open-data type="userNickName" style="font-size:30rpx;"></open-data>  -->
+        <image src='../../../img/logo.png'></image>
+        <button wx:if="{{canIUse}}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" >授权手机</button>
+      <view wx:else>请升级微信版本</view>
+    </view>
+     <!-- <span bindtap='goback'>×</span> -->
+  </view>
+</view>
+
+

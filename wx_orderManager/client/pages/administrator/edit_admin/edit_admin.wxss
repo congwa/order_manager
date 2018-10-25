@@ -1,0 +1,153 @@
+page{
+  background: #f5f5f9;
+}
+.container {
+  width: 100%;
+  background: #f5f5f9;
+  padding-bottom:100rpx;
+}
+
+.container .header {
+  width: 100%;
+  height: 156rpx;
+  background: #323a45;
+  color: #fff;
+}
+
+.container .header .head_center {
+  width: 82%;
+  height: 80rpx;
+  margin: 0 auto;
+  position: relative;
+}
+
+.container .header .head_center input {
+  position: absolute;
+  border-radius: 80rpx;
+  width: 100%;
+  height: 100%;
+  border: 2rpx solid #87919f;
+}
+
+.weui-search-bar__box {
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 80rpx;
+  border: 2rpx solid #87919f;
+}
+.weui-search-bar {
+  background: #323a45;
+  border: none;
+  padding:35rpx 20rpx;
+
+}
+.weui-search-bar__input{
+  height: 80rpx;
+}
+.weui-search-bar .weui-search-bar__form{
+   border-radius: 80rpx;
+   background:#323a45; 
+}
+.weui-search-bar .weui-search-bar__form .weui-search-bar__label{
+    border-radius: 80rpx;
+    line-height: 80rpx;
+   background: #323a45;
+}
+.weui-search-bar .weui-search-bar__cancel-btn{
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color: #fff;
+}
+.weui-search-bar__text{
+  /* color: #fff; */
+}
+.container .register_info{
+  width: 92%;
+  height: 88rpx;
+  border-radius: 5rpx;
+  background: #fff;
+  margin: 0 auto;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+	color: #999999;
+}
+.register_info input{
+  width: 80%;
+}
+.register_info image{
+  width: 80rpx;
+	height: 80rpx;
+  border-radius: 80rpx;
+}
+.container .head{
+  height: 98rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.container .head text{
+  width: 80%;
+  color: #333333;
+}
+.container .name{
+  border-bottom: 1rpx solid #ddd;
+}
+.authority{
+  width: 92%;
+  margin: 20rpx auto;
+  background: #fff;
+}
+.authority .auth_title{
+  text-align: center;
+  font-size: 30rpx;
+	color: #333333;
+  padding: 32rpx 0;
+  border-bottom: 1rpx solid #ddd;
+}
+.auth_con{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 17rpx 0 30rpx;
+  box-sizing: border-box;
+}
+.auth_con .auth_part{
+  width: 28.9%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+	color: #666666;
+  text-align: center;
+  background: #f5f5f5;
+ margin-bottom: 20rpx;
+ position: relative;
+ border-radius: 3rpx;
+}
+.auth_con .auth_part:nth-of-type(3n-1){
+  margin:0 40rpx;
+}
+.auth_con .auth_part span{
+  display: block;
+  width: 30rpx;
+	height: 30rpx;
+  background: url(http://thyrsi.com/t6/369/1536650552x-1404817712.png) no-repeat center;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.active{
+  border: 2rpx solid  #169bd5; 
+  box-sizing: border-box;
+}
+.btn{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:50rpx auto;
+}

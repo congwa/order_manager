@@ -1,0 +1,2 @@
+<!--pages/rule/rule.wxml-->
+<web-view src="{{url}}"></web-view>

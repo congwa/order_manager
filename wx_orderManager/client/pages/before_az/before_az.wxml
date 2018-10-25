@@ -1,0 +1,5 @@
+<!--pages/before_az/before_az.wxml-->
+<view class='btn_con'>
+  <view class='btn' bindtap='gosign'><image src='../../img/boss.png' style=''></image></view>
+  <view class='btn' bindtap='goaz'><image src='../../img/staff.png'></image> </view> 
+ </view>

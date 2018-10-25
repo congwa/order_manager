@@ -1,0 +1,40 @@
+<!-- pages/main/main.wxml -->
+<i-message id="message"  bindtap="gowithdraw"/>
+<view wx:if="{{loading}}" class="container">
+    <i-spin fix></i-spin>
+</view>
+
+
+<view class="container">
+    <view class="header">
+        <!-- <view class="title">小橘点餐商户管理</view> -->
+        <view class="day-con">
+            <view class="left">
+                <view class="l-title">今日订单量</view>
+                <view class="l-numebr">{{btnList.order}}</view>
+            </view>
+            <view class="right">
+                <view class="l-title">今日营业额</view>
+                <view class="l-numebr">{{btnList.price}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="notice">
+        <image class="icon" src="../../img/main/icon.png"></image>
+        <view class="roll">
+            <view class="rollCon">
+                <view class='box'>
+                    <view class='text' style='left:{{offsetLeft}}px'>{{btnList.notice}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="btn-con">
+        <view class="btn {{item.id==10?'weui-btn-area':''}}" data-id="{{item.id}}"  wx:for="{{btnList.actions}}" bindtap="goView">
+            <image class="img" src="{{item.image}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+            <view class="name" hover-class="none" hover-stop-propagation="false">
+                {{item.title}}
+            </view>
+        </view>
+    </view>
+</view>

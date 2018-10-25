@@ -1,0 +1,31 @@
+<view class='container'>
+  <view wx:for="{{pData}}" class="order_part">
+    <view class='order_title'>
+      <span>{{index+1}}</span>  
+      <view>
+        <text>{{typeName[item.type]}}</text> <div class='fa fa-{{item.line_type==1?"wifi":"feed"}}'></div> {{item.line_type==2?item.phone:''}} </view> <!-- 13989330814 -->
+      <button data-id="{{item.id}}" class='status_btn' bindtap="del">删除</button>
+    </view>
+    <view class='order_info_con'>
+      <view class='order_info'>  
+        <view class='tit'>{{item.title}}</view> 
+        <view>
+          <text>打印</text>{{item.number}}份</view>
+        <view>
+          <text>KEY</text>{{item.key}} </view>
+        <view>
+          <text>S  N</text>{{item.sn}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class="add-con">
+ <view class="go_btn">
+   <navigator url="/pages/main/main" open-type="reLaunch" hover-class="other-navigator-hover">返回首页</navigator>
+  </view>
+ <view class='add_btn' bindtap='goCreat'>
+  <image src='../../../img/plus_orange.png'></image>添加打印机</view>
+</view>
+

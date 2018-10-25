@@ -1,0 +1,44 @@
+<view class='container'>
+  <view class='header'>
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" maxlength='11' placeholder="输入手机号码" value="{{inputVal}}" focus="{{inputShowed}}" bindconfirm='searchOrder' bindinput="inputTyping" />
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">输入手机号码</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">
+        取消
+      </view>
+    </view>
+
+  </view>
+  <view class='register_info head' data-id='{{res.id}}' wx:if="{{res.nick_name}}">
+    <image src='{{res.head_img}}'></image>
+    <text >{{res.nick_name}}</text>
+  </view>
+ <view class='register_info name' wx:if="{{res.nick_name}}">
+    <text>姓名</text>
+    <input type='text' placeholder='请输入姓名' bindinput="setName"></input>
+  </view>
+  <view class='register_info' wx:if="{{res.nick_name}}">
+    <text>职位</text>
+    <input type='text' placeholder='请输入职位' bindinput="setJob"></input>
+  </view>
+  <view class='authority' wx:if="{{res.nick_name}}">
+    <view class='auth_title'>请选择权限</view>
+    <view class='auth_con'>
+      <view wx:for="{{rulesNames}}" data-idx="{{index}}" data-id="{{item.id}}" class="auth_part {{rules[index]?'active':''}}" bindtap="setRules" >{{item.title}}
+        <span wx:if="{{rules[index]}}"></span>
+       </view>
+    </view>
+  </view>
+</view>
+<button class='btn' bindtap='goList'  data-id='{{res.id}}' wx:if="{{res.nick_name}}">保存</button>

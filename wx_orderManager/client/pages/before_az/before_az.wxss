@@ -1,0 +1,17 @@
+page{
+  background: #fff;
+}
+.btn_con{
+  margin: 20vh auto 0;
+}
+.btn{
+  width: 690rpx;
+	height: 300rpx;
+  margin: 50rpx auto;
+  color: #fff;
+}
+.btn image{
+  width: 690rpx !important;
+	height: 300rpx !important;
+  margin: 0 auto;
+}

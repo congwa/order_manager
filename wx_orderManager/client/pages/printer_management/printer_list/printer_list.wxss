@@ -1,0 +1,293 @@
+.container {
+  width: 100%;
+  background: #f5f5f9;
+}
+
+.container .header {
+  width: 100%;
+  height: 156rpx;
+  background: #323a45;
+  color: #fff;
+}
+
+.container .header .head_center {
+  width: 82%;
+  height: 80rpx;
+  margin: 0 auto;
+  position: relative;
+}
+
+.container .header .head_center input {
+  position: absolute;
+  border-radius: 80rpx;
+  width: 100%;
+  height: 100%;
+  border: 2rpx solid #555e69;
+}
+
+.weui-search-bar__box {
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 80rpx;
+  border: 2rpx solid #555e69;
+}
+
+.weui-search-bar {
+  background: #323a45;
+  border: none;
+  padding: 35rpx 20rpx;
+}
+
+.weui-search-bar__input {
+  height: 80rpx;
+}
+
+.weui-search-bar .weui-search-bar__form {
+  border-radius: 80rpx;
+  background: #323a45;
+}
+
+.weui-search-bar .weui-search-bar__form .weui-search-bar__label {
+  border-radius: 80rpx;
+  line-height: 80rpx;
+  background: #323a45;
+}
+
+.weui-search-bar .weui-search-bar__cancel-btn {
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color: #fff;
+}
+
+.tab_container {
+  width: 100%;
+}
+
+.tab_menu {
+  width: 100%;
+  height: 80rpx;
+  background: #323a45;
+  display: flex;
+}
+
+.tab_menu view {
+  flex: 1;
+  text-align: center;
+}
+
+.tab_menu view.active {
+  background: #ebeced;
+  border-radius: 10rpx 10rpx 0 0;
+}
+
+.tab_menu view.active text {
+  color: #ff5d42;
+}
+
+.tab_menu view text {
+  font-size: 28rpx;
+  line-height: 80rpx;
+  color: #fff;
+}
+
+swiper {
+  height:1000rpx;
+}
+
+swiper-item {
+  background: #f5f5f9;
+}
+
+.order_part span {
+  display: block;
+  width: 50rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  background: #169bd5;
+  text-align: center;
+  color: #fff;
+  font-size: 28rpx;
+}
+.order_part .order_info view {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 30rpx;
+}
+
+.order_part .order_info view:last-of-type {
+  margin: 0;
+}
+
+.order_part .order_info view text {
+  color: #999;
+  margin-right: 15rpx;
+  display: inline-block;
+  width: 120rpx;
+}
+
+.order_part .order_info .price_col {
+  color: #ff2b4d;
+}
+
+.order_part .order_info .tel_col {
+  color: #0069df;
+}
+
+.order_part .accept_col {
+  color: #169bd5;
+}
+
+.order_part  .cancle_col {
+  color: #ff5d42;
+}
+
+.order_part .refuse_col {
+  width: 198rpx;
+  color: #999;
+}
+
+.order_part {
+  width: 100%;
+  box-sizing: border-box;
+  /* display: flex;
+  align-items: flex-start; */
+  padding: 0rpx 30rpx 38rpx;
+  /* justify-content: space-between; */
+  margin-bottom: 20rpx;
+  background: #fff;
+}
+
+.order_title {
+  width: 100%;
+  height:120rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx dashed #ddd;
+  position: relative;
+}
+
+.order_part .order_title span {
+  display: inline-block;
+  width: 50rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  background: #169bd5;
+  text-align: center;
+  color: #fff;
+  font-size: 28rpx;
+  margin-right: 20rpx;
+}
+
+.order_part .order_title text {
+  color: #999;
+  margin-right: 15rpx;
+  display: inline-block;
+  width: 120rpx;
+}
+
+.order_part .order_title view {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.order_info_con {
+  display: flex;
+  padding-left: 70rpx;
+  padding-top: 30rpx;
+  justify-content: space-between;
+}
+
+.order_part .order_info {
+  /* width: 70%; */
+  font-size: 28rpx;
+}
+
+.order_part .order_info view {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 30rpx;
+}
+.order_part .order_info .tit{
+  color: #fe5d41;
+}
+.order_part .order_info view:last-of-type {
+  margin: 0;
+}
+
+.order_part .order_info view text {
+  color: #999;
+  margin-right: 15rpx;
+  display: inline-block;
+  width: 120rpx;
+}
+
+.status_btn {
+  color: #333;
+  background: #ff6b12;
+  color: #fff;
+  border: none;
+  width: 140rpx;
+	height: 48rpx;
+  font-size: 28rpx;
+  line-height: 48rpx;
+  position: absolute;
+  right: 0;
+}
+
+.order_part .order_info .price_col {
+  color: #ff2b4d;
+}
+
+.order_part .order_info .tel_col {
+  color: #0069df;
+}
+
+.order_part .accept_col {
+  color: #169bd5;
+}
+
+.order_part  .cancle_col {
+  color: #ff5d42;
+}
+
+.order_part .refuse_col {
+  width: 198rpx;
+  color: #999;
+}
+.add_btn{
+  width: 70%;
+  height: 98rpx;
+	background:#fe5d41;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 34rpx;
+  /* position: fixed;
+  bottom: 0; */
+}
+.add_btn image{
+ width: 40rpx;
+	height: 40rpx;
+  margin-right: 22rpx;
+}
+
+.add-con{
+  width: 100%;
+  position: fixed;
+  display: flex;
+  height: 98rpx;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 0;
+}
+.go_btn{
+  width: 30%;
+  height: 98rpx;
+	background:#169bd5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 34rpx;
+}

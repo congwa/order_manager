@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "基础设施完善",
+  "component": true,
+  "usingComponents": {
+    "i-spin": "../../../iview/spin/index",
+    "i-toast": "../../../iview/toast/index"
+  }
+}

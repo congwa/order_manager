@@ -1,0 +1,11 @@
+<view class="good">
+    <image class="good-img" src="../../../img/qrcode.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+        
+    </image>
+    <view class="con" bindtap='goCreat'>
+        <image class="con-img" src="../../../img/plus.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+            
+        </image>
+        <view class="text">添加二维码</view>
+    </view>
+</view>

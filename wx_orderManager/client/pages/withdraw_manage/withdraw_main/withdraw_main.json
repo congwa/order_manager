@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "银行卡列表",
+  "component": true,
+  "usingComponents": {
+    "i-modal": "../../../iview/modal/index"
+}
+}

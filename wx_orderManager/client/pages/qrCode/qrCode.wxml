@@ -1,0 +1,14 @@
+<!--pages/qrCode/qrCode.wxml-->
+
+
+<view class="t1">你已提交审核，请耐心等待</view>
+<view class="t2">或</view>
+<view class="t3">长按识别二维码入群</view>
+<view class="t4">
+    <image class="i4" src="../../img/img.jpg" style="text-align:center;width:470rpx;height:462rpx;" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+        
+    </image>
+    <view class="t4-v" hover-class="none" hover-stop-propagation="false">
+        联系电话：010-12365478
+    </view>
+</view>

@@ -1,0 +1,109 @@
+<view class="container">
+  <view class="order_shop">
+    <text>王先生</text>
+    <view data-iphone="{{data.address.phone}}" bindtap="call" class="call_btn">
+      <image src="../images/tel.png"></image>
+      打电话
+    </view>
+  </view>
+  <view class="shop_info">
+    <view class="code">
+     流水号：
+      <font>{{111}}</font>
+    </view>
+    <text>「已完成」</text>
+  </view>
+  <view class="order_con">
+    <view wx:for="{{data.goods}}" class="order_sheet">
+      <view class="order_sheet_part">
+        <image src="{{root + item.goods_thumb}}"></image>
+        <view class="foods_name">
+          <text>{{item.goods_name}}</text>
+          <text>×{{item.goods_amount}}</text>
+        </view>
+        <text class="price">¥{{item.goods_price/100}}</text>
+      </view>
+      <!-- <view class="order_sheet_part">
+                <image src="../images/order2_06.png"></image>
+                <view class="foods_name">
+                    <text>宫保鸡丁</text>
+                    <text>×{{2}}</text>
+                </view>
+                <text class="price">¥{{88}}</text>
+            </view> -->
+    </view>
+    <block>
+      <view class="discounts">
+        <view class="disct_info">
+          <view>
+            <text>减</text> 满减优惠
+          </view>
+          <view>-{{data.coupon_price}}</view>
+        </view>
+        <view class="disct_info">
+          <view>
+            <text>券</text> 代金券
+          </view>
+          <view>-{{data.rebate}}</view>
+        </view>
+      </view>
+      <view class="sum_price">
+        <span class="cheap">已优惠¥{{data.coupon_price + data.rebate}}</span>
+        <view class="sum">
+          合计
+          <text>¥{{data.pay_price/100}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+    <view class="pay_infomation">
+            <view class="pay_part remark" >
+                <text>备注</text>
+                <text>{{data.remarks}}</text>
+            </view>     
+    </view>
+  <!-- <view class="pay_infomation">
+    <view class="pay_part pay_title">
+      <text>用餐信息</text>
+      <text></text>
+    </view>
+    <view class="pay_part">
+      <text>用餐人数</text>
+      <text>{{data.address.number}}人</text>
+    </view>
+    <view class="pay_part">
+      <text>用餐时间</text>
+      <text>{{data.address.reserve_time}}</text>
+    </view>
+    <view class="pay_part customer_part">
+      <text>姓名</text>
+      <text>{{data.address.name}}</text>
+    </view>
+    <view class="pay_part">
+      <text>电话</text>
+      <text>{{data.address.phone}}</text>
+    </view>
+    <view class="pay_part remark">
+      <text>备注</text>
+      <text>{{data.remarks}}</text>
+    </view>
+  </view> -->
+  <view class="pay_infomation order_info">
+    <view class="pay_part pay_title">
+      <text>订单信息</text>
+      <text></text>
+    </view>
+    <view class="pay_part">
+      <text>订单号</text>
+      <text>{{data.order_number}}</text>
+    </view>
+    <!-- <view class="pay_part">
+      <text>支付方式 </text>
+      <text>{{pay_type[data.pay_type]}}</text>
+    </view> -->
+    <view class="pay_part">
+      <text>下单时间 </text>
+      <text>{{data.create_time}}</text>
+    </view>
+  </view>
+</view>

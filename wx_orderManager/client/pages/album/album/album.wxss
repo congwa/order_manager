@@ -1,0 +1,118 @@
+page{
+  background: #f5f5f5;
+  padding-bottom: 98rpx;
+}
+
+.weui-grid{
+  /* width: 28%; */
+  border: none;
+  padding-bottom:0;
+} 
+.weui-grid__icon{
+  width: 212rpx;
+  height: 212rpx;
+  border-radius: 5rpx;
+}
+.weui-grid_active{
+  background: none;
+  position: relative;
+}
+.page__hd{
+   height: 100rpx;
+   text-align: right;
+   margin-bottom: 20rpx;
+   background: #fff;
+   /* display: flex;
+   justify-content: flex-end;
+   align-items: center; */
+}
+.page__bd{
+   background: #fff;
+   padding-bottom: 20rpx;
+}
+.page__hd button{
+  width: 190rpx;
+	height: 48rpx;
+  margin-top: 26rpx;
+  margin-right:18rpx;
+	line-height: 48rpx;
+	background:#169bd5;
+  font-size: 28rpx;
+	color: #ffffff;
+  border: none;
+  float: right;
+}
+
+.weui-grid__label{
+  margin-top: 20rpx;
+}
+.weui-grids{
+  border: none;
+}
+.add_btn,.edt_btn{
+  width: 70%;
+  height: 98rpx;
+	background:#fe5d41;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 34rpx;
+  /* position: fixed;
+  bottom: 0; */
+}
+.add_btn image{
+ width: 40rpx;
+	height: 40rpx;
+  margin-right: 22rpx;
+}
+.add-con{
+  width: 100%;
+  position: fixed;
+  display: flex;
+  height: 98rpx;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 0;
+}
+.go_btn{
+  width: 30%;
+  height: 98rpx;
+	background:#169bd5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 34rpx;
+}
+
+.edt_btn{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.edt_btn button{
+  flex: 1;
+  height: 100%;
+  border-radius: 0;
+  color: #fff;
+  font-size: 34rpx;
+  background: #169bd5;
+  border: none;
+}
+.edt_btn button:last-of-type{
+  background: #fe5d41;
+}
+.empty_select{
+  width: 40rpx;
+	height: 40rpx; 
+  position: absolute;
+  right:34rpx;
+  top:42rpx;
+  z-index: 1000;
+}
+.select{
+  z-index: 1001;
+}

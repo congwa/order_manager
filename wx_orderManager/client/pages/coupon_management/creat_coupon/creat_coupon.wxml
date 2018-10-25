@@ -1,0 +1,34 @@
+
+<i-toast id="toast" />
+
+<view class='container'>
+  <view class='register_info'>
+    <text>名称</text>
+    <input type='text' placeholder='请输入优惠券名称' bindinput="setTitle"></input>
+  </view>
+  <view class='register_info'>
+    <text>优惠金额</text>
+    <input type='number' placeholder='请输入优惠金额' bindinput="setPrice"> </input>
+  </view>
+  <view class='register_info'>
+    <text>使用条件</text>
+    <input type='number' placeholder='请输入满足使用条件的金额' bindinput="setFullPrice"></input>
+  </view>
+  <view class='register_info'>
+    <text>数量</text>
+    <input type='number' placeholder='请输入优惠券数量' bindinput="setNumber"></input>
+  </view>
+  <view class='register_info'>
+    <text>有效期</text>
+    <view class="right">
+      <picker mode="date" value="{{nDate}}" start="{{nDate}}" end="{{eDate}}" bindchange="bindDateChange">
+        <view class="picker">{{start_time?start_time:'开始 '}}</view>
+      </picker>至
+      <picker mode="date" value="{{start_time}}" start="{{start_time}}" end="{{eDate}}" bindchange="bindDate2Change">
+        <view class="picker">{{end_time?end_time:'结束'}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class='tip'>说明：用户领取后才可使用</view>
+  <button class='btn' bindtap='goList'>确定</button>
+</view>

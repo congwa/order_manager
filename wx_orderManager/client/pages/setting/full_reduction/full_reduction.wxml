@@ -1,0 +1,23 @@
+<view class='container'>
+  <view class='authority'>
+    <view class='auth_title'>设置满减优惠</view>
+    <view class='auth_con'>
+      <view class='full_redu'>
+        满
+        <input type='number' placeholder='' bindinput='changePrice'></input> 减
+        <input type='number' bindinput='changePullprice'></input>
+      </view>
+      <text>说明：最多添加5条，且不能重复</text>
+      <button class='btn' bindtap='goEdit'>完成</button>
+    </view>
+  </view>
+  <view class='cou_con' >
+    <view class='cou_part' wx:for="{{dis_data}}" >
+       <span>满{{item[0]}}减{{item[1]}}</span>
+       <view class='part_right'>
+         <button id='{{index}}' bindtap='godelete' >删除</button>
+         <!-- <text>2018-08-23 17:50:00</text> -->
+       </view>
+    </view>
+  </view>
+</view>

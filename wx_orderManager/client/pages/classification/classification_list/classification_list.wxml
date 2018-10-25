@@ -1,0 +1,28 @@
+
+<view wx:if="{{loading}}" class="container">
+    <i-spin fix></i-spin>
+</view>
+
+<view wx:if="{{!loading && !list}}">还没有分类呢,请添加</view>
+<view wxLif="{{!loading && list}}"class='container'>
+   <view wx:for="{{list}}" class='cls_part'>
+     <text>{{item.title}}</text>
+     <view class='btn_con'>
+        <button data-id="{{item.id}}" data-title="{{item.title}}" data-num='{{item.sort}}' bindtap="set">编辑</button>
+        <button data-id="{{item.id}}" bindtap="del">删除</button>
+     </view>
+   </view>
+</view>
+
+<view class="add-con">
+ <view class="go_btn">
+    <navigator url="/pages/main/main" open-type="reLaunch" hover-class="other-navigator-hover">返回首页</navigator>
+  </view>
+  <view class='add_btn' bindtap='goCreat'>
+    <image src='../../../img/plus_orange.png'></image>
+    添加分类
+  </view>
+</view>
+
+
+

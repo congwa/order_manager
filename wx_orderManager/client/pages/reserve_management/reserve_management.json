@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "navigationBarTitleText": "预定管理",
+  "usingComponents": {
+    "i-spin": "../../iview/spin/index"
+  }
+}

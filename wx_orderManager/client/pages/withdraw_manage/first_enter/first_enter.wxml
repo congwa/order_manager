@@ -1,0 +1,29 @@
+<i-toast id="toast" />
+
+<view class='container'>
+  <view class='register_info'>
+    <text>银行</text>
+     <picker style="width:70%" bindchange="setBank" value="{{bankIndex}}" range="{{banks}}">
+    <view class="picker">
+      {{bank_name?bank_name:'请选择银行'}}
+    </view>
+  </picker>
+  </view>
+  <view class='register_info'>
+    <text>银行卡开户地</text>
+    <input type='text'   placeholder='请输入银行卡开户地' value='{{bank_open_address}}' bindinput="setBankArea"></input>
+  </view>
+  <view class='register_info'>
+    <text>银行卡开户行</text>
+    <input type='text' placeholder='请输入银行卡开户行' value='{{bank_open_name}}'  bindinput="setBankAreaDetail"></input>
+  </view>
+  <view class='register_info'>
+    <text>银行卡卡号</text>
+      <input type='number' placeholder='请输入银行卡卡号' value='{{bank_number}}'  bindinput="setBankNumber"></input>
+  </view>
+  <view class='register_info'>
+    <text>持卡人姓名</text>
+    <input type='text' placeholder='请输入持卡人姓名' value='{{bank_number_name}}' bindinput="setName"></input>
+  </view>
+  <button class='btn' bindtap='goWithdraw'>确定</button>
+</view>

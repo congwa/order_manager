@@ -1,0 +1,100 @@
+<!-- pages/marktData/marktData.wxml -->
+
+<view wx:if="{{loading}}" class="container">
+    <i-spin fix></i-spin>
+</view>
+
+
+
+<view class="tab_menu">
+    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">
+        <text>营业额</text>
+    </view>
+    <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">
+        <text>订单</text>
+    </view>
+    <view class="swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">
+        <text>销量</text>
+    </view>
+</view>
+<view current="{{currentTab}}" duration="300" bindchange="swiperTab">
+    <view wx:if="{{currentTab == 0}}">
+            <view>
+                <text class="t-title">说明：统计所有已完成的订单</text>
+            </view>
+            <view>
+                <text class="t-type">总收入</text>
+            </view>
+            <view>
+                <text class="t-text">{{money}}元</text>
+            </view>
+            <view class="c-con">
+                <view class="left">营业额详情</view>
+                <view class="right">
+                    <picker mode="date" value="{{timeFrom1}}" start="{{nDate1}}" end="{{eData1}}" bindchange="bindDateFrom1">
+                        <view class="picker">{{timeFrom1}}</view>
+                    </picker>
+                    至
+                    <picker mode="date" value="{{timeto1}}" start="{{nDate1}}" end="{{eData1}}" bindchange="bindDateTo1">
+                        <view class="picker">{{timeto1}}</view>
+                    </picker>
+                </view>
+            </view>
+            <view  class="chart">
+                <canvas canvas-id="lineCanvas1" style="height:300px;width:98%"  class="canvas" bindtouchstart="touchHandler1"></canvas>
+            </view>
+    </view>
+    <view wx:if="{{currentTab == 1}}">
+        <view>
+            <text class="t-title">说明：统计所有已完成的订单</text>
+        </view>
+        <view>
+            <text class="t-type">总收入</text>
+        </view>
+        <view>
+            <text class="t-text">{{money}}元</text>
+        </view>
+        <view class="c-con">
+            <view class="left">营业额详情</view>
+            <view class="right">
+                <picker mode="date" value="{{timeFrom2}}" start="{{nDate2}}" end="{{nDate2}}" bindchange="bindDateFrom2">
+                    <view class="picker">{{timeFrom2}}</view>
+                </picker>
+                至
+                <picker mode="date" value="{{timeto2}}" start="{{nDate2}}" end="{{nDate2}}" bindchange="bindDateFrom2">
+                    <view class="picker">{{timeto2}}</view>
+                </picker>
+            </view>
+        </view>
+        <view  class="chart">
+            <canvas canvas-id="lineCanvas2" style="height:300px;width:98%" class="canvas" bindtouchstart="touchHandler2"></canvas>
+        </view>
+    </view>
+    <view wx:if="{{currentTab == 2}}">
+        <view>
+            <view class="o-center">
+                <view class="left">
+                    <view class="tab {{curOrderSelect==index?'active':''}}" wx:for="{{listName}}" wx:key="" data-current="{{index}}" bindtap="clickChange">
+                        {{item}}
+                    </view>
+                </view>
+                <view class="right">
+                    <scroll-view scroll-into-view="{{curOrderSelect}}" scroll-y="true" scroll-with-animation="true" class="scr" style="height:{{conentHeight}}rpx;">
+                        <view class="d-con" wx:for="{{data3}}">
+                            <view class="des" wx:key="*this" data-comid='{{item.goods_id}}'>
+                                <image class="img_con" src="{{item.goods_thumb}}" data-src="{{item.goods_thumb}}" bindtap="previewImg"></image>
+                                <view class="text_con">
+                                    <text class="text name">{{item.goods_name}}</text>
+                                    <text class="text desc">数量: {{item.total}}</text>
+                                </view>
+                            </view>
+                        </view>
+                        <view wx:if="{{data3.length == 0}}" class="empty-data3">
+                            {{listName[curOrderSelect]}}没有销量信息
+                        </view>
+                    </scroll-view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

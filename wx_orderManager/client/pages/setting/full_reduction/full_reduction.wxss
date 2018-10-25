@@ -1,0 +1,91 @@
+page{
+  background: #f5f5f5;
+}
+.container{
+  background: #f5f5f5;
+}
+.authority,.cou_con{
+  width: 92%;
+  margin: 20rpx auto;
+  background: #fff;
+  
+}
+.cou_con .cou_part{
+  height: 150rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #ddd;
+}
+.cou_con .cou_part:last-of-type{
+  border: none;
+}
+.cou_con .cou_part span{
+  display: block;
+  width: 250rpx;
+  font-size: 30rpx;
+	color: #666666;
+}
+.part_right button{
+   width: 140rpx;
+	height: 48rpx;
+	line-height: 48rpx;
+	background-color: #ff6b12;
+  font-size: 28rpx;
+	color: #ffffff;
+}
+.part_right text{
+  font-size: 26rpx;
+	color: #999999;
+}
+.authority .auth_title{
+  text-align: center;
+  font-size: 30rpx;
+	color: #333333;
+  padding: 32rpx 0;
+  border-bottom: 1rpx solid #ddd;
+}
+.auth_con{
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; */
+  padding: 17rpx;
+  /* box-sizing: border-box; */
+  text-align: center;
+}
+.auth_con .full_redu{
+  display: flex;
+  justify-content: center;
+  font-size: 30rpx;
+	color: #333333;
+  margin-top: 96rpx;
+}
+.auth_con .full_redu input{
+  width: 140rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+.auth_con  text{
+  display: block;
+  font-size: 24rpx;
+	color: #999999;
+  margin: 18rpx 0 67rpx;
+}
+.auth_con  .btn{
+  margin-bottom: 54rpx;
+  background: #ff6b12;
+  color: #fff;
+}
+/* .auth_con .auth_part{
+  width: 28.9%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+	color: #666666;
+  text-align: center;
+  background: #f5f5f5;
+ margin-bottom: 20rpx;
+ position: relative;
+ border-radius: 3rpx;
+} */

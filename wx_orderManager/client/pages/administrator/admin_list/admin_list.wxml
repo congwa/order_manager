@@ -1,0 +1,55 @@
+<view class="container">
+  <view class="page__hd">
+    <button bindtap='showedit'>管理</button>
+  </view>
+  <block wx:for="{{list}}" wx:key="id">
+    <view class="kind-list__item">
+      <view  class="weui-flex kind-list__item-hd {{item.open ? 'kind-list__item-hd_show' : ''}}">
+        <checkbox-group bindchange="checkboxChange" id="{{item.id}}"  wx:if="{{editflag&&item.is_admin!=1}}" >
+          <label class="checkbox">
+            <checkbox  value="{{item.name}}"   checked="{{item.checked}}" />
+          </label>
+        </checkbox-group>
+        <!-- <i-panel title="" wx:if="{{editflag}}">
+          <i-checkbox-group current="{{current}}" bindchange="handleFruitChange">
+            <i-checkbox  value="{{item.name}}"></i-checkbox>
+          </i-checkbox-group>
+        </i-panel> -->
+        <view class="weui-flex__item"  >
+          {{item.name?item.name:'admin'}}
+          <text>{{item.job?item.job:'管理员'}}</text>
+          <button wx:if='{{item.is_admin!=1}}' data-id='{{item.id}}' data-name="{{item.name}}" data-job="{{item.job}}" bindtap='goEdit'>编辑</button>
+        </view>
+        <!-- <image class="kind-list__img" src="images/icon_nav_{{item.id}}.png"></image> -->
+        <image wx:if='{{item.is_admin!=1}}' class="kind-list__img" src="../../../img/arrow_up.png" id="{{item.id}}" bindtap="kindToggle"></image>
+      </view>
+      <view class="kind-list__item-bd {{item.open ? 'kind-list__item-bd_show' : ''}}">
+        <view class="weui-cells {{item.open ? 'weui-cells_show' : ''}}">
+          <block wx:for="{{item.rules}}" wx:for-item="page" wx:key="*this">
+            <view class="auth_part active">
+              {{limits[page]}}
+              <span></span>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<view class="add-con" wx:if='{{!editflag}}'>
+  <view class="go_btn"  >
+    <navigator url="/pages/main/main" open-type="reLaunch" hover-class="other-navigator-hover">
+      返回首页
+    </navigator>
+  </view>
+  <view class='add_btn' bindtap='goCreat'>
+    <!-- <image src='../../../img/plus_orange.png'></image> -->
+    添加管理员
+  </view>
+</view>
+
+<view class='edt_btn' wx:if='{{editflag}}'>
+  <button bindtap='selectAll'>全选</button>
+  <button bindtap='godel'>删除</button>
+</view>

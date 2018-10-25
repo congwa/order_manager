@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "i-message": "../../iview/message/index",
+        "i-spin": "../../iview/spin/index"
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "navigationBarTitleText": "二维码",
+  "usingComponents": {
+    "i-toast": "../../../iview/toast/index"
+  }
+}

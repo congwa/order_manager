@@ -1,0 +1,219 @@
+.container {
+  width: 100%;
+  background: #f5f5f9;
+}
+.container .shop_info {
+  width: 100%;
+  height: 90rpx;
+  padding:0 4%;
+  box-sizing: border-box;
+  /* padding-bottom: 30rpx; */
+  text-align: center;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom:20rpx; 
+}
+.container .shop_info image {
+  width: 100rpx;
+  height: 100rpx;
+  margin-bottom: 30rpx;
+}
+.container .shop_info text,
+.container .shop_info span {
+  display: block;
+  font-size: 30rpx;
+  color: #333333;
+  margin-bottom: 30rpx;
+}
+.container .shop_info text{
+  margin-bottom: 0;
+  font-size: 28rpx;
+ 
+}
+.container .shop_info .price{
+ color: #ff2b4d;
+}
+
+.container .shop_info span {
+  color: #ff6b12;
+}
+.container .shop_info .code {
+  font-size: 28rpx;
+  color: #333;
+  /* margin-bottom: 30rpx; */
+}
+.container .shop_info .code font {
+  /* font-size: 72rpx; */
+  font-weight: bold;
+}
+.container .order_con {
+  width: 100%;
+  margin-top: 20rpx;
+  background: #fff;
+}
+.container  .order_shop {
+  width: 92%;
+  padding: 0rpx 4% ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.container .order_shop text {
+  font-size: 28rpx;
+  color: #333333;
+}
+.container .order_shop .call_btn {
+  width: 190rpx;
+  height: 48rpx;
+  background: #47cacc;
+  color: #fff;
+  line-height: 48rpx;
+  font-size: 26rpx;
+  text-align: center;
+  border-radius: 5rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container  .order_shop .call_btn image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 18rpx;
+}
+.container .order_con .order_sheet {
+  width: 96%;
+  padding: 0rpx 2% ;
+}
+.container .order_con .order_sheet .order_sheet_part {
+  width: 96%;
+  padding: 25rpx 2% 0;
+  height: 80rpx;
+  background: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .order_con .order_sheet .order_sheet_part image {
+  display: block;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 5rpx;
+}
+.container .order_con .order_sheet .order_sheet_part .foods_name {
+  width: 463rpx;
+  height: 100%;
+}
+.container .order_con .order_sheet .order_sheet_part .foods_name text {
+  display: block;
+  font-size: 26rpx;
+  color: #333333;
+}
+.container .order_con .order_sheet .order_sheet_part .foods_name text:last-of-type {
+  color: #888888;
+}
+.container .order_con .order_sheet_part:last-of-type {
+  padding-bottom: 25rpx;
+}
+.container .order_con .discounts {
+  border-bottom: 1rpx dashed #ddd;
+  width: 92%;
+  padding: 30rpx 0% 26rpx;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.container .order_con .discounts .disct_info {
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .order_con .discounts .disct_info view {
+  font-size: 28rpx ;
+  color: #888;
+}
+.container .order_con .discounts .disct_info view text {
+  display: inline-block;
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  border-radius: 30rpx;
+  background: #ff6b12;
+  color: #fff;
+  margin-right: 20rpx ;
+  font-size: 22rpx;
+  text-align: center;
+}
+.container .order_con .discounts .disct_info view:last-of-type {
+  color: #ff2b4d;
+}
+.container .order_con .sum_price {
+  width: 92%;
+  margin: 0 auto;
+  height: 90rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.container .order_con .sum_price .cheap {
+  display: block;
+  color: #888;
+  font-size: 26rpx ;
+  margin-right: 40rpx;
+}
+.container .order_con .sum_price .sum {
+  color: #333;
+  font-size: 26rpx;
+}
+.container .order_con .sum_price .sum text {
+  color: #ff2b4d;
+}
+.container .pay_infomation {
+  width: 92%;
+  padding: 0 4%;
+  background: #fff;
+}
+.container .pay_infomation .pay_part {
+  width: 100%;
+  padding: 30rpx 0;
+  color: #888;
+  border-bottom: 1rpx dashed #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .pay_infomation .pay_part text {
+  display: block;
+  font-size: 26rpx;
+  color: #333;
+}
+.container .pay_infomation .pay_part text:first-of-type {
+  width: 151rpx;
+}
+.container .pay_infomation .pay_part text:last-of-type {
+  color: #333;
+}
+.container .pay_infomation .pay_part:last-of-type {
+  border: none;
+}
+.container .pay_infomation .pay_title {
+  font-weight: bold;
+}
+.container .pay_infomation .remark {
+  align-items: flex-start;
+}
+.container .order_info {
+  margin-bottom: 20rpx;
+}
+.container .order_info .pay_part text {
+  color: #666;
+}
+.container  .pay_infomation .remark {
+  align-items: flex-start;
+  padding: 0;
+}

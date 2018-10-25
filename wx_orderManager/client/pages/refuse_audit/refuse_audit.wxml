@@ -1,0 +1,13 @@
+
+<view class='container'>
+  <image src='../../img/signed.png'></image>
+   <view>这个真不行</view>
+   <view>原因：营业执照不够清晰，如有问题请联系客服</view>
+   <!-- <image src='../../img/service.jpg' bindtap="previewSDetail" data-src='../../img/service.jpg'></image>
+   -->
+   <button class='btn' open-type="contact"><image src='../../img/prop.png'></image> 直接撩客服</button>
+   <navigator url='../register/register'> <button class='btn btn2' > 再次注册</button></navigator>
+   
+    <text>联系电话：010-61212550</text>
+
+</view>

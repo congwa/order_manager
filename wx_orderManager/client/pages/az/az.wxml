@@ -1,0 +1,17 @@
+<!--wxml-->
+<!-- 如果只是展示用户头像昵称，可以使用 <open-data /> 组件 -->
+<!-- <view hidden="{{show}}" style="width:200rpx;height:200rpx;margin:100rpx auto;">
+  <open-data type="userAvatarUrl" ></open-data>
+  <open-data type="userNickName" style="font-size:30rpx;"></open-data>
+  <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" style="font-size:30rpx;">授权登录</button>
+  <view wx:else>请升级微信版本</view>
+</view> -->
+
+<view wx:if="{{loading}}"  style="display:flex;justify-content: center;align-items: center; height: 100vh;"  class="container">
+    <image class="wait" style="width:500rpx;height:500rpx"  src="../../img/waiting.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+      
+    </image>
+    <!-- <i-spin fix></i-spin> -->
+    
+</view>
+<component-login wx:if="{{ (!loading && show)|| (!loading && showNum) }}" show="{{show}}" showNum="{{showNum}}" bindmyevent="onMyEvent" bindmyiphone="onMyIphone"></component-login>

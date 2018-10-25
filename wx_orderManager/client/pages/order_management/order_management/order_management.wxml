@@ -1,0 +1,151 @@
+<!--pages/order_management/order_management.wxml-->
+<view wx:if="{{loading}}" class="container">
+    <i-spin fix></i-spin>
+</view>
+
+
+
+<view class='container'>
+  <view class='header'>
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindconfirm='searchOrder' bindinput="inputTyping" />
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">
+        取消
+      </view>
+    </view>
+
+  </view>
+  <view class='tab_container'>
+    
+    <view class='tab_menu'>
+      <view class="{{curSelect==0?'active':''}}" data-current="0" bindtap="changeSelect">
+        <text>点餐</text>
+      </view>
+      <view class="{{curSelect==1?'active':''}}" data-current="1" bindtap="changeSelect">
+        <text>订餐</text>
+      </view>
+      <view class="{{curSelect==2?'active':''}}" data-current="2" bindtap="changeSelect">
+        <text>订桌</text>
+      </view>
+      <view class="{{curSelect==3?'active':''}}" data-current="3" bindtap="changeSelect">
+        <text>买单</text>
+      </view>
+    </view>
+    <swiper current="{{curSelect}}" duration="300" bindchange="swiperTab">
+      <swiper-item>
+        <!-- 点餐 -->
+        <view wx:for="{{oD3}}" data-ordernumber="{{item.order_number}}" data-type="3" bindtap="goDetail" class="order_part">
+          <span>{{index}}</span>
+          <view class='order_info'>
+            <view>
+              <text>订单编号</text>{{item.order_number}} </view>
+            <view>
+              <text>序列号 </text>{{item.queue}} </view>
+            <view>
+              <text>桌   号</text>{{item.table_number}} </view>
+            <view class='price_col'>
+              <text>金   额</text>¥ {{item.table_number}} </view>
+            <view>
+              <text>下单时间</text>{{item.create_time}} </view>
+          </view>
+           <view class='status_btn' >「{{orderStatus[item.status]}}」</view>
+        </view>
+        <view wx:if="{{oD4.length ==0||oD3.length ==0||oD1.length ==0||oD2.length ==0}}" class='empty'>
+      <image class="" src="../../../img/empty2.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+
+      </image>
+      <text>您还没有小橘的订单哦，我们一起努力吧!</text>
+    </view>
+      </swiper-item>
+      <swiper-item>
+        <!-- 订餐 -->
+        <view wx:for="{{oD4}}" data-ordernumber="{{item.order_number}}" data-type="4" bindtap="goDetail" class="order_part">
+          <span>{{index}}</span>
+          <view class='order_info'>
+            <view>
+              <text>订单编号</text>{{item.order_number}} </view>
+            <view>
+              <text>联系人 </text>{{item.name}} </view>
+            <view class='tel_col'>
+              <text>电   话 </text> {{item.phone}} </view>
+            <view class='price_col'>
+              <text>金   额</text>¥ {{item.pay_price}} </view>
+            <view>
+              <text>下单时间</text>{{item.create_time}}</view>
+          </view>
+          <view class='status_btn' >「{{orderStatus[item.status]}}」</view>
+        </view>
+        <view wx:if="{{oD4.length ==0}}" class='empty'>
+      <image class="" src="../../../img/empty1.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+
+      </image>
+      <text>您还没有小橘的订单哦，我们一起努力吧!</text>
+    </view>
+      </swiper-item>
+      <swiper-item>
+        <!-- 订桌 -->
+        <view wx:for="{{oD1}}" data-ordernumber="{{item.order_number}}" data-type="1" bindtap="goDetail" class="order_part">
+          <span>{{index}}</span>
+          <view class='order_info'>
+            <view>
+              <text>订单编号</text>{{item.order_number}} </view>
+            <view>
+              <text>联系人 </text>{{item.name}} </view>
+            <view class='tel_col'>
+              <text>电   话 </text> {{item.phone}} </view>
+            <view>
+              <text>下单时间</text>{{item.create_time}} </view>
+          </view>
+            <view class='status_btn' >「{{orderStatus[item.status]}}」</view>
+        </view>
+        <view wx:if="{{oD1.length ==0}}" class='empty'>
+      <image class="" src="../../../img/empty2.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+
+      </image>
+      <text>您还没有小橘的订单哦，我们一起努力吧!</text>
+    </view>
+
+      </swiper-item>
+      <swiper-item>
+        <!-- 买单 -->
+        <view wx:for="{{oD2}}" data-ordernumber="{{item.order_number}}" data-type="2" bindtap="goDetail" class="order_part">
+          <span>{{index}}</span>
+          <view class='order_info'>
+            <view>
+              <text>订单编号</text>{{item.order_number}} </view>
+            <!-- <view class='tel_col'><text>电   话 </text> 15810448888 </view>    -->
+            <view class='price_col'>
+              <text>金   额</text>¥ {{item.pay_price}} </view>
+            <view>
+              <text>下单时间</text>{{item.create_time}} </view>
+          </view>
+          <view class='status_btn' >「{{orderStatus[item.status]}}」</view>
+          <!-- <view class='status_btn'  wx:if='{{item.status ==2}}'>「 待支付 」</view>
+          <view class='status_btn'  wx:if='{{item.status ==3}}'>「 已取消 」</view>
+          <view class='status_btn'  wx:if='{{item.status ==4}}'>「 等待商家处理 」</view>
+          <view class='status_btn'  wx:if='{{item.status ==5}}'>「 已接单 」</view>
+          <view class='status_btn'  wx:if='{{item.status ==6}}'>「 拒绝接单 」</view> -->
+        </view>
+        <view wx:if="{{oD2.length ==0}}" class='empty'>
+      <image class="" src="../../../img/empty1.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+
+      </image>
+      <text>您还没有小橘的订单哦，我们一起努力吧!</text>
+    </view>
+
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

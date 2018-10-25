@@ -1,0 +1,8 @@
+<view class='container'>
+  <image src='../../img/waiting_a.png'></image>
+   <view>需要老板把您拉入群后，
+才能与我正式见面哦～</view>
+  
+    <!-- <text>联系电话：010-61212550</text> -->
+
+</view>

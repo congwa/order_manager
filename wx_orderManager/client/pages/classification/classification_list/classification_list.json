@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "navigationBarTitleText": "菜品分类",
+  "usingComponents": {
+    "i-spin": "../../../iview/spin/index"
+  }
+}

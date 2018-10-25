@@ -1,0 +1,175 @@
+page{
+  background: #f5f5f5;
+  padding-bottom: 98rpx;
+}
+.page__hd{
+  width: 100%;
+   height: 100rpx;
+   text-align: right;
+   margin-bottom: 20rpx;
+   background: #fff;
+   /* display: flex;
+   justify-content: flex-end;
+   align-items: center; */
+}
+.page__hd button{
+  width: 190rpx;
+	height: 48rpx;
+  margin-top: 26rpx;
+  margin-right:18rpx;
+	line-height: 48rpx;
+	background:#169bd5;
+  font-size: 28rpx;
+	color: #ffffff;
+  border: none;
+  float: right;
+}
+/*!
+ * WeUI v1.1.1 (https://github.com/weui/weui-wxss)
+ * Copyright 2017 Tencent, Inc.
+ * Licensed under the MIT license
+ */
+.weui-flex{-webkit-box-align:center;-webkit-align-items:center;align-items:center}.weui-cells{margin-top:0;opacity:0;-webkit-transform:translateY(-50%);transform:translateY(-50%);-webkit-transition:.3s;transition:.3s}.weui-cells:after,.weui-cells:before{display:none}.weui-cells_show{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}.weui-cell:before{right:15px}.kind-list__item{width:92%;margin:10px auto;background-color:#fff;border-radius:2px;overflow:hidden}.kind-list__item:first-child{margin-top:0}.kind-list__img{width:30px;height:30px}.kind-list__item-hd{padding:20px;-webkit-transition:opacity .3s;transition:opacity .3s}.kind-list__item-hd_show{opacity:.4}.kind-list__item-bd{height:0;overflow:hidden}.kind-list__item-bd_show{height:auto}
+.weui-flex__item{
+  font-size: 30rpx;
+  color: #333333;
+  display: flex;
+  align-items: center;
+}
+.weui-flex__item button{
+  width: 140rpx;
+	height: 48rpx;
+	line-height: 48rpx;
+  background:#169bd5;
+  font-size: 28rpx;
+	color: #ffffff;
+}
+.weui-flex__item text{
+  margin-left: 100rpx;
+}
+.weui-flex__item image{
+  width: 28rpx;
+	height: 15rpx;
+  
+}
+.kind-list__img{
+  width: 35rpx;
+  height: 24rpx;
+}
+.weui-cells_show{
+
+  background: #ebebeb;
+   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 17rpx;
+  box-sizing: border-box;
+}
+
+ .auth_part{
+  width: 28.9%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+	color: #666666;
+  text-align: center;
+  background: #f5f5f5;
+ margin-bottom: 20rpx;
+ position: relative;
+ border-radius: 3rpx;
+}
+ .auth_part:nth-of-type(3n-1){
+  margin:0 40rpx;
+}
+.auth_part span{
+  display: block;
+  width: 30rpx;
+	height: 30rpx;
+  background: url(http://thyrsi.com/t6/369/1536650552x-1404817712.png) no-repeat center;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.active{
+  border: 2rpx solid  #169bd5; 
+  box-sizing: border-box;
+}
+.add_btn{
+  width: 70%;
+  height: 98rpx;
+	background:#fe5d41;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 34rpx;
+}
+.edt_btn{
+  width: 100%;
+  height: 98rpx;
+	background:#fe5d41;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 34rpx;
+  position: fixed;
+  bottom: 0;
+}
+.add_btn image{
+ width: 40rpx;
+	height: 40rpx;
+  margin-right: 22rpx;
+}
+.add-con{
+  width: 100%;
+  position: fixed;
+  display: flex;
+  height: 98rpx;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 0;
+}
+.go_btn{
+  width: 30%;
+  height: 98rpx;
+	background:#169bd5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 34rpx;
+}
+
+
+
+
+.edt_btn button{
+  flex: 1;
+  height: 100%;
+  border-radius: 0;
+  color: #fff;
+  font-size: 34rpx;
+  background: #169bd5;
+  border: none;
+}
+.edt_btn button:last-of-type{
+  background: #fe5d41;
+}
+.empty_select{
+  width: 40rpx;
+	height: 40rpx; 
+  position: absolute;
+  right:34rpx;
+  top:42rpx;
+  z-index: 1000;
+}
+.select{
+  z-index: 1001;
+}
+.edt_btn{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}

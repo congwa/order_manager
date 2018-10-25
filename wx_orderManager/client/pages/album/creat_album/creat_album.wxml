@@ -1,0 +1,30 @@
+<i-toast id="toast" />
+
+<view class='container'>
+  <view class='register_info'>
+    <text>标题</text>
+    <input type='text' placeholder='请输入标题' bindinput="setTitle"></input>
+  </view>
+  <view class='register_info'>
+    <text>排序</text>
+    <input type='number' placeholder='0-99 越小越前' bindinput="setNumber"></input>
+  </view>
+  <view class='info_img'>
+    <text>图片</text>
+    <view class="upload_pic">
+      <view class="upload_btn" bindtap='selectImage'>
+        <image  src='{{logo ?logo : "../../../img/camera.png"}}'></image>
+      </view>
+      <view class="tip_text" bindtap="selectImage">
+        <text>上传图片</text>
+      </view>
+    </view>
+    <!--图片复现的容器-->
+    <view class="show_pic">
+      <image wx:for="{{previewSrcs}}" wx:key="*this" src="{{PROJECT_ROOT+item}}" style="width:100rpx;height:100rpx"></image>
+    </view>
+   
+  </view>
+  <view class='tip'>说明：每位用户最多上传12张</view>
+</view>
+ <button class='sub_info' bindtap='goalbum'>提交</button>

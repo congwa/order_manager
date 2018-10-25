@@ -1,0 +1,71 @@
+<i-toast id="toast" />
+<view wx:if="{{loading}}" class="container">
+    <i-spin fix></i-spin>
+</view>
+
+
+<view class='container'>
+  <view class='register_info'>
+    <text>分类</text>
+    <view class="section">
+      <picker bindchange="bindPickerChange" value="{{index}}" range-key="title" range="{{sortList}}">
+        <view class="picker">
+          {{ctitle?ctitle:sortList[index].title}}
+        </view>
+      </picker>
+
+    </view>
+    <text>﹀</text>
+  </view>
+  <view class='register_info'>
+    <text>菜名</text>
+    <input type='text' value="{{title}}" placeholder='请输入菜名' bindinput="setTitle" ></input>
+  </view>
+  <view class='register_info'>
+    <text>口味</text>
+    <input type='text' value="{{expand}}" placeholder='每个口味用“ , ”分隔。例 : 微辣' bindinput="setExpand" ></input>
+  </view>
+  <view class='register_info'>
+    <text>价格</text>
+    <view class='price'>¥
+      <input type='number' value="{{price}}" placeholder='请输入价格' bindinput="setPrice"></input>
+    </view>
+
+  </view>
+  <view class='register_info'>
+    <text>推荐</text>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio" >
+        <radio value="不推荐" checked='true' color='#169bd5'/>不推荐
+      </label>
+       <label class="radio" >
+        <radio value="推荐" checked='' color='#169bd5'/>推荐
+      </label>
+    </radio-group>
+  </view>
+  <view class='register_info'>
+    <text>排序</text>
+    <input type='number' value="{{sort}}" placeholder='越小越靠前 0～99' bindinput="setSort"></input>
+  </view>
+  <view class='register_info intr'>
+    <text>简介</text>
+    <input type='text' value="{{summary}}" placeholder='请输入菜品简介' bindinput="setSummary"  class='introduce'></input>
+  </view>
+  <view class='info_img'>
+    <text>菜品图片</text>
+    <view class="upload_pic">
+      <view class="upload_btn" bindtap='selectImage'>
+        <image src="{{img}}"></image>
+      </view>
+      <view class="tip_text">
+        <text>上传图片（建议尺寸：750x750px）</text>
+
+      </view>
+    </view>
+    <!--图片复现的容器-->
+    <view class="show_pic">
+      <image wx:for="{{previewSrcs}}" wx:key="*this" src="{{PROJECT_ROOT+item}}" style="width:100rpx;height:100rpx"></image>
+    </view>
+  </view>
+  <button class='sub_info' bindtap='goEdit'>确定</button>
+</view>

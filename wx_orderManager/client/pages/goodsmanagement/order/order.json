@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText":"菜品管理",
+  "disableScroll":true,
+  "usingComponents": {
+    "i-checkbox-group": "../../../iview/checkbox-group/index",
+    "i-checkbox": "../../../iview/checkbox/index",
+    "i-toast": "../../../iview/toast/index",
+    "i-spin": "../../../iview/spin/index"
+  }
+}

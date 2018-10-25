@@ -1,0 +1,8 @@
+<view class='container'>
+   <image src='../../img/17services.png'></image>
+   <!-- <view>长按识别二维码入群</view>
+   <image src='../../img/service.jpg' bindtap="previewSDetail" data-src='../../img/service.jpg'></image>
+   -->
+   <button class='btn' open-type="contact"><image src='../../img/prop.png'></image> 直接撩客服</button>
+    <text>联系电话：010-61212550</text>
+</view>

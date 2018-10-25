@@ -1,0 +1,88 @@
+<view class='container'>
+  <view class='header'>
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindconfirm='searchOrder' bindinput="inputTyping" />
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">
+        取消
+      </view>
+    </view>
+
+  </view>
+  <view class='order_content'>
+     <view class="order_part">
+          <view class='order_title'>
+               <span>{{oData.length+1}}</span>
+               <text>「 {{type[oData.type]}} 」</text>
+          </view>  
+          <view class='order_info_con'>      
+             <view class='order_info'>           
+                <view><text>订单编号</text>{{oData.order_number}}  </view>
+                <view><text>序列号 </text>{{oData.queue}} </view>
+                <view><text>桌   号</text>{{oData.table_number}}  </view>          
+                <view class='price_col'><text>金   额</text>¥{{oData.pay_price}}  </view>
+                <view><text>下单时间</text>{{oData.create_time}} </view>
+             </view> 
+            <view class='status_btn'>「 已完成 」</view>
+          </view> 
+      </view>
+      <!-- <view class="order_part">
+          <view class='order_title'>
+               <span>2</span>
+               <text>「 订桌 」</text>
+          </view>  
+          <view class='order_info_con'>      
+             <view class='order_info'>           
+                <view><text>订单编号</text>2018020512345678  </view>
+                <view><text>联系人 </text>王小平 </view>
+                 <view class='tel_col'><text>电   话 </text> 15810448888 </view>            
+                <view class='price_col'><text>金   额</text>¥ 100 </view>
+                <view><text>下单时间</text>2018.01.01  12:09:09 </view>
+             </view> 
+            <view class='status_btn cancle_col'>「 待接单 」</view>
+          </view> 
+      </view>
+      <view class="order_part">
+          <view class='order_title'>
+               <span>3</span>
+               <text>「 订餐 」</text>
+          </view>  
+          <view class='order_info_con'>      
+             <view class='order_info'>           
+                <view><text>订单编号</text>2018020512345678  </view>
+                <view><text>联系人 </text>王小平 </view>
+                 <view class='tel_col'><text>电   话 </text> 15810448888 </view>            
+                <view class='price_col'><text>金   额</text>¥ 100 </view>
+                <view><text>下单时间</text>2018.01.01  12:09:09 </view>
+             </view> 
+            <view class='status_btn accept_col'>「 已接单 」</view>
+          </view> 
+      </view>
+      <view class="order_part">
+          <view class='order_title'>
+               <span>4</span>
+               <text>「 买单 」</text>
+          </view>  
+          <view class='order_info_con'>      
+             <view class='order_info'>           
+                <view><text>订单编号</text>2018020512345678  </view>
+                 <view class='tel_col'><text>电   话 </text> 15810448888 </view>            
+                <view class='price_col'><text>金   额</text>¥ 100 </view>
+                <view><text>下单时间</text>2018.01.01  12:09:09 </view>
+             </view> 
+            <view class='status_btn'>「 已完成 」</view>
+          </view> 
+      </view> -->
+  </view>
+</view>

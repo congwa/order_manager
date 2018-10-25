@@ -1,0 +1,252 @@
+
+ 
+ .o-center {
+  height: auto;
+  font-size: 24rpx;
+  display: flex;
+}
+
+ .o-center .left {
+  width: 166rpx;
+}
+
+ .o-center .left .tab {
+  height: 108rpx;
+  width: 166rpx;
+  color: #333;
+  text-align: center;
+  line-height: 108rpx;
+  font-size: 26rpx;
+  background-color: #f5f5f9;
+  border-top: 1rpx solid;
+  border-color: #ddd;
+  display: block;
+}
+
+ .o-center .left .tab:first-of-type {
+  border-top: none;
+}
+
+ .o-center .left .active {
+  color: #ff6b12;
+  background-color: #fff;
+  font-size: 30rpx;
+}
+
+ .o-center .right .scr {
+  height: 100%;
+}
+
+ .o-center .right .right_tab {
+  margin-left: 20rpx;
+  position: relative;
+}
+
+ .o-center .right .right_tab .des_type {
+  color: #666;
+  font-size: 24rpx;
+  line-height: 60rpx;
+}
+
+ .o-center .right .right_tab .des {
+  padding-bottom: 50rpx;
+  font-size: 24rpx;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  position: relative;
+}
+
+ .o-center .right .right_tab .des .img_con {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 5rpx;
+  /* flex: 1; */
+}
+
+ .o-center .right .right_tab .des .text_con {
+  font-size: 24rpx;
+  height: auto;
+  flex: 2.4;
+}
+
+ .o-center .right .right_tab .des .text_con .text {
+  display: block;
+  line-height: 40rpx;
+  margin-left: 20rpx;
+}
+
+ .o-center .right .right_tab .des .text_con .name {
+  font-size: 28rpx;
+  color: #333;
+}
+
+ .o-center .right .right_tab .des .text_con .desc {
+  font-size: 24rpx;
+  color: #888;
+  width: 365rpx;
+  height: 83rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+ .o-center .right .right_tab .des .text_con .price {
+  font-size: 34rpx;
+  color: #ff2b4d;
+}
+
+ .o-center .right .right_tab .add_btn {
+  position: absolute;
+  right: 40rpx;
+  top: 0rpx;
+  width: 90rpx;
+  height: 45rpx;
+  background: #169bd5;
+  text-align: center;
+  color:#fff;
+  font-size: 26rpx;
+  
+}
+
+.manager{
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  border-bottom: 20rpx solid #f5f5f9;
+}
+.btn{
+  margin-top: 28rpx;
+  margin-right: 30rpx;
+  float: right;
+  text-align: center;
+  line-height: 50rpx;
+  background: #169bd5;
+  width: 200rpx;
+  font-size: 26rpx;
+  letter-spacing: 5rpx;
+  color:#fff;
+}
+
+.footer{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+}
+.all{
+  flex: 1;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  background-color: #169bd5;
+  letter-spacing: 5rpx;
+  text-align: center;
+  color: #fff;
+}
+.del{
+  flex: 1;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  background-color: #ff5d42;
+  letter-spacing: 5rpx;
+  text-align: center;
+  color: #fff;
+}
+.add-footer{
+  /* width: 70%;
+  height: 100rpx; */
+  /* position: fixed;
+  bottom: 0; */
+  /* line-height: 100rpx;
+  background: #169bd5;
+  text-align: center;
+  color:#fff;
+  font-size: 34rpx; */
+}
+.add_btn{
+  width: 70%;
+  height: 98rpx;
+	background:#fe5d41;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 34rpx;
+  /* position: fixed;
+  bottom: 0; */
+}
+.add_btn image{
+ width: 40rpx;
+	height: 40rpx;
+  margin-right: 22rpx;
+}
+
+.add-con{
+  width: 100%;
+  position: fixed;
+  display: flex;
+  height: 98rpx;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 0;
+}
+.go_btn{
+  width: 30%;
+  height: 98rpx;
+	background:#169bd5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 34rpx;
+}
+
+.d-con{
+  display: flex;
+  justify-content: space-between;
+}
+.d-con .d-left{
+  flex: 1;
+}
+.d-con .d-left image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.d-con .des{
+  flex:5;
+}
+
+/* pages/goodManager/goodManager.wxss */
+
+.good{
+  width: 692rpx;
+height: 328rpx;
+background-color: #ffffff;
+border-radius: 5px;
+  opacity: 0.6;
+  position: relative;
+  margin:29rpx;
+}
+.good-img{
+  width: 100%;
+  height: 100%;
+}
+.con-img{
+  width: 110rpx;
+height: 110rpx;
+}
+.con{
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+
+.text{
+  font-size: 28rpx;
+  color:#fff;
+}
+

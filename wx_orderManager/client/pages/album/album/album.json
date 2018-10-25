@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "navigationBarTitleText": "商家相册",
+  "usingComponents": {
+    "i-spin": "../../../iview/spin/index"
+  }
+}

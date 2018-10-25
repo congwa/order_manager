@@ -1,0 +1,101 @@
+
+
+<view wx:if="{{loading}}" class="container">
+    <i-spin fix></i-spin>
+</view>
+
+
+<view class='tab_container'>
+  <view class='tab_menu'>
+    <view class="{{curSelect==0?'active':''}}" data-current="0" bindtap="changeSelect">
+      <text>未过期</text>
+    </view>
+    <view class="{{curSelect==1?'active':''}}" data-current="1" bindtap="changeSelect">
+      <text>已过期</text>
+    </view>
+
+  </view>
+  <swiper current="{{curSelect}}" duration="300" bindchange="swiperTab" style="height:{{windowHeight}}">
+    <swiper-item id='swiper-item1' style="overflow:scroll" >
+      <!-- 未过期 -->
+      <view wx:if="{{yData.length==0}}" class='empty'>
+        <image class="" src="../../../img/empty4.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">          
+        </image>
+        没有未过期优惠券
+        </view>
+      <view wx:for="{{yData}}" class="order_part">
+        <view class='order_title'>
+          <span>{{index+1}}</span>
+          <view>
+            <text>{{item.title}} </text>满{{item.full_price}}减{{item.price}} </view>
+          <button class='status_btn' data-id="{{item.id}}" bindtap="del">删除</button>
+        </view>
+        <view class='order_info_con'>
+          <view class='order_info'>
+            <view>
+              <text>剩   余</text>{{item.number}}张</view>
+            <view>
+              <text>已领取</text>{{item.old_number-item.number}}张 </view>
+            <view>
+              <text>有效期</text> {{item.start_time}} 至 {{item.end_time}}</view>
+          </view>
+        </view>
+      </view>
+      <!-- <view class="order_part">
+        <view class='order_title'>
+          <span>1</span>
+          <view>
+            <text>代金券 </text>满500减10 </view>
+          <button class='status_btn'>删除</button>
+        </view>
+        <view class='order_info_con'>
+          <view class='order_info'>
+            <view>
+              <text>剩   余</text>200张</view>
+            <view>
+              <text>已领取</text>150张 </view>
+            <view>
+              <text>有效期</text> 2018.01.01 至 2018.02.01</view>
+          </view>
+        </view>
+      </view> -->
+    </swiper-item>
+    <swiper-item id='swiper-item2' style="overflow:scroll">
+      <!-- 已过期 -->
+       <view wx:if="{{nData.length==0}}" class='empty'>
+        <image class="" src="../../../img/empty4.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">          
+        </image>
+        没有已过期优惠券
+        </view>
+      <view wx:for="{{nData}}" class="order_part">
+         <view class='order_title'>
+          <span>{{index+1}}</span>
+          <view>
+            <text>{{item.title}} </text>满{{item.full_price}}减{{item.price}} </view>
+          <button class='status_btn' data-id="{{item.id}}" bindtap="del">删除</button>
+        </view>
+        <view class='order_info_con'>
+          <view class='order_info'>
+            <view>
+              <text>剩   余</text>{{item.old_number}}张</view>
+            <view>
+              <text>已领取</text>{{item.number}}张 </view>
+            <view>
+              <text>有效期</text> {{item.start_time}} 至 {{item.end_time}}</view>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+
+</view>
+
+
+<view class="add-con">
+ <view class="go_btn">
+   <navigator url="/pages/main/main" open-type="reLaunch" hover-class="other-navigator-hover">返回首页</navigator>
+  </view>
+ <view class='add_btn' bindtap='goCreat'>
+  <image src='../../../img/plus_orange.png'></image>添加优惠券</view>
+</view>
+

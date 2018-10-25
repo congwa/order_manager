@@ -1,0 +1,161 @@
+<view wx:if="{{loading}}" class="container">
+    <i-spin fix></i-spin>
+</view>
+
+<i-toast id="toast" />
+
+<view class='container'>
+
+  <view class='input_info'>
+    <!-- <text>*</text> -->
+    <span>店铺分类</span>
+    <view class="section">
+      <picker bindchange="bindPickerChange" value="{{index}}" range-key="{{'title'}}" range="{{sortList}}">
+        <view class="picker" data-id='{{sortList[index].id}}'>
+          类别选择：{{sortList[index].title}}
+        </view>
+      </picker>
+    </view>
+    <image src='../images/right.png'></image>
+  </view>
+  <view class='input_info'>
+    <!-- <text>*</text> -->
+    <span>营业时间</span>
+    <view class='open_time'>
+      <picker bindchange="bindPickerTimeFrom" value="{{timeFrom}}" range="{{timeList}}">
+        <view class="picker">
+          {{timeList[timeFrom]}}
+        </view>
+      </picker>
+      <text>至</text>
+      <picker bindchange="bindPickerTimeTo" value="{{timeTo}}" range="{{timeList}}">
+        <view class="picker">
+          {{timeList[timeTo]}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='input_info'>
+    <!-- <text>*</text> -->
+    <span>人均价</span>
+    <input type='number' bindinput="priceChange" value='{{details.price}}' style='color:#333333;font-size:28rpx;'></input>
+  </view>
+
+  <!-- <view class='input_info'>
+  
+    <span>地址</span>
+    <view class='section'>
+      <input placeholder="选择" class='select_address' value="{{province}}-{{city}}-{{county}}" focus="{{focus}}" bindfocus="open" />
+      <view class='select_address' bindtap="open">{{province}}-{{city}}-{{county}}</view>
+    </view>
+    <image src='../images/right.png'></image>
+  </view> -->
+  <!-- <view class='input_info address'>
+    <span>详细地址</span>
+    <input type='text' bindinput="dAddressChange"></input>
+  </view> -->
+  <view class='input_info tel_info' style='border:none;'>
+    <!-- <text>*</text> -->
+    <span style=''>店内电话</span>
+    <!-- <text>*</text> -->
+    <view class='tel_contain'>
+      <view class='tel_part'>
+        <text>1.</text>
+        <input type='number' data-type="0" maxlength="11" bindinput="iphoneChange" placeholder='必填' value='{{details.mobile[0]?details.mobile[0]:""}}' ></input>
+      </view>
+      <view class='tel_part'>
+        <text>2.</text>
+        <input type='number' data-type="1" maxlength="11" bindinput="iphoneChange" placeholder='选填' value='{{details.mobile[1]?details.mobile[1]:""}}' ></input>
+      </view>
+      <view class='tel_part'>
+        <text>3.</text>
+        <input type='number' data-type="2" maxlength="11" bindinput="iphoneChange" placeholder='选填' value='{{details.mobile[2]?details.mobile[2]:""}}' ></input>
+      </view>
+    </view>
+
+  </view>
+</view>
+<view class='register_info'>
+  <text>支持预定</text>
+  <radio-group class="radio-group" bindchange="radioChange1">
+    <label class="radio">
+      <radio value="1" checked="{{details.is_bespeak==1?true:false}}" color='#169bd5' />支持
+    </label>
+    <label class="radio">
+      <radio value="2" checked="{{details.is_bespeak==2?true:false}}" color='#169bd5' />不支持
+    </label>
+  </radio-group>
+</view>
+<view class='register_info'>
+  <text>支持退款</text>
+  <radio-group class="radio-group" bindchange="radioChange2">
+    <label class="radio">
+      <radio value="1" checked="{{details.is_reimburse==1?true:false}}" color='#169bd5' />支持
+    </label>
+    <label class="radio">
+      <radio value="2" checked="{{details.is_reimburse==2?true:false}}" color='#169bd5' />不支持
+    </label>
+  </radio-group>
+</view>
+<view class='container' style='margin-top:20rpx;'>
+  <view class='input_info tel_info shopimg_con'>
+    <view class='shopimg_left'>
+      <span style=''>店铺LOGO</span>
+    </view>
+    <view class='shopimg_right'>
+      <view class='tel_contain'>
+        <view class='img_con'>
+          <image bindtap="logoChange"  src='{{logo ?logo : "../../img/write_comment_07.png"}}' class='shopimg'></image>
+          <!-- <image src='../images/plus.png' class='shopimg' bindtap="logoChange"> </image> -->
+        </view>
+        <view class='text_con'>
+          <view>上传图片</view>
+          <view>建议尺寸180x180像素</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <view class='input_info tel_info shopimg_con'>
+    <view class='shopimg_left'>
+      <span style=''>banner</span>
+    </view>
+    <view class='shopimg_right'>
+      <view class='tel_contain'>
+
+        <view class='img_con'>
+          <!-- <image bindtap="doorChange" wx:if="{{!door}}" src='' class='shopimg'></image> -->
+          <image bindtap="doorChange"  src='{{door?door:"../../img/write_comment_07.png"}}'  class='shopimg shoppings'></image>
+          <!-- <image src='../images/plus.png' class='shopimg' > </image> -->
+        </view>
+        <view class='text_con'>
+          <view>上传图片</view>
+          <view>建议尺寸750x300像素</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <!-- <button class='btn' bindtap='goCertificate' data-id='{{details.id}}'>保存</button> -->
+  <button class='btn'  data-id='{{details.nav_id}}' bindtap='goCertificate'>保存</button>
+</view>
+
+
+<!-- city三联选择 -->
+<view wx:if="{{condition}}" class="mask">
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange" class="citybody">
+    <view class="cityheader">
+      <view bindtap="open" class="city-cancel">取消</view>
+      <view bindtap="open" class="city-true">确定</view>
+    </view>
+    <picker-view-column>
+      <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>

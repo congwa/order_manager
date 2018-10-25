@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "营销数据",
+  "navigationBarBackgroundColor": "#323a45",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "i-spin": "../../iview/spin/index"
+  }
+}

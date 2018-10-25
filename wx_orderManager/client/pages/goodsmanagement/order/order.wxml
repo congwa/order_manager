@@ -1,0 +1,65 @@
+<i-toast id="toast" />
+
+<view wx:if="{{loading}}" class="container">
+    <i-spin fix></i-spin>
+</view>
+
+
+
+<view >
+    <view class="manager">
+        <view  wx:if="{{!leftShow}}" class="btn" data-manager="manager" bindtap="btnManager">管理</view>
+        <view  wx:if="{{leftShow}}"class="btn" data-manager="manager" bindtap="btnManager">取消</view>
+    </view>
+    <view class="o-center">
+        <view class="left">
+            <view class="tab {{curSelect==cName?'active':''}}" wx:for="{{data}}" wx:for-index="cName" wx:key=""  data-cName="{{cName}}" bindtap="clickTab">
+                {{cName}}
+            </view>
+        </view>
+        <view class="right">
+            <scroll-view scroll-into-view="{{'sc'+curOrderSelect}}" scroll-y="true" scroll-with-animation="true" class="scr" style="height:{{windowHeight}}rpx;" bindscroll='bindScroll'>
+                <view class="right_tab" wx:for="{{data}}" wx:for-index="cName" wx:key="*this" id="{{'sc'+cName}}"  data-cid="{{cName}}" >
+                    <view class="des_type">{{cName}}</view>
+                    <view class="d-con"  wx:for="{{data[cName]}}">
+                        <view class="d-left" wx:if="{{leftShow}}">
+                            <i-panel title="checkbox-动物">
+                                <i-checkbox  checked="{{item.select}}" data-id="{{item.id}}" data-index="{{index}}" data-cname="{{cName}}"  bindchange="handleAnimalChange">
+                                </i-checkbox>
+                            </i-panel>
+                        </view>
+                        <view class="des" wx:key="*this" data-comid='{{item.id}}'>
+                            <image class="img_con" src="{{item.img}}" data-src="{{item.img}}" bindtap="previewImg"></image>
+                            <view class="text_con">
+                                <text class="text name">{{item.title}}</text>
+                                <text wx:if="{{item.expand}}" class="text desc">口味：{{item.expandespc}}</text>
+                                <text class="text desc">{{item.summary}}</text>
+                                <text class="text price">￥{{item.price}}</text>
+                            </view>
+                            <text wx:if="{{!leftShow}}" data-id="{{item.id}}" class="add_btn" bindtap='goCreatbyId'>编辑</text>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+
+    <view wx:if="{{leftShow}}"  class="footer">
+        <view class="all" bindtap="btnAll">全选</view>
+        <view class="del" bindtap="btnDel">删除</view>
+    </view>
+
+
+    <view class="add-con" wx:if="{{!leftShow}}">
+        <view class="go_btn">
+           <navigator url="/pages/main/main" open-type="reLaunch" hover-class="other-navigator-hover">返回首页</navigator>
+        </view>
+         <view class='add_btn' bindtap='goCreat' >
+            <image src='../../../img/plus_orange.png'></image>添加菜品
+        </view> 
+    </view>
+
+  
+ 
+</view>
+

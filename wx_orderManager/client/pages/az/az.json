@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "登录",
+    "usingComponents": {
+      "component-login":"./login/login",
+      "i-spin": "../../iview/spin/index"
+    }
+}

@@ -1,0 +1,73 @@
+page{
+  background: #f5f5f5;
+}
+.cls_part{
+  width: 100%;
+  padding: 0 28rpx;
+  box-sizing: border-box;
+  height: 140rpx;
+	background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.cls_part text{
+  font-size: 30rpx;
+	color: #666666;
+}
+.cls_part .btn_con{
+  display: flex;
+  width: 300rpx;
+  justify-content: space-between;
+}
+.cls_part .btn_con button{
+  width: 140rpx;
+	height: 48rpx;
+	line-height: 48rpx;
+  font-size: 28rpx;
+	color: #ffffff;
+  border: none;
+  background:#169bd5;
+  border-radius: 5rpx;
+}
+.cls_part .btn_con button:last-of-type{
+  background:#ff6b12;
+}
+
+
+.add_btn{
+  width: 70%;
+  height: 98rpx;
+	background:#fe5d41;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 34rpx;
+}
+.add_btn image{
+ width: 40rpx;
+	height: 40rpx;
+  margin-right: 22rpx;
+}
+
+.add-con{
+  width: 100%;
+  position: fixed;
+  display: flex;
+  height: 98rpx;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 0;
+}
+.go_btn{
+  width: 30%;
+  height: 98rpx;
+	background:#169bd5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 34rpx;
+}

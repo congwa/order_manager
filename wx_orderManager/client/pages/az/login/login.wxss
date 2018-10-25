@@ -1,0 +1,62 @@
+
+.mask {
+
+  left: 0rpx ;
+  right: 0rpx;
+  bottom: 0rpx;
+  top:0rpx;
+  position: fixed;
+  display:flex;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.mask-con{
+  width:92%;
+  height:500rpx;
+  position: fixed;
+  border-radius: 5rpx;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  /* display:flex; */
+  z-index: 999;
+  /* justify-content:center;
+  align-content:center; */
+  background: #fff;
+   position: relative;
+}
+
+.mask-con view {
+ width: 100%;
+
+}
+
+.mask-con view  image{
+display: block;
+width: 280rpx;
+height: 295rpx;
+margin: 10rpx auto;
+position: relative;
+top: -65rpx;
+}
+.mask-con view button{
+width: 60%;
+height: 80rpx;
+background: #ff6b12;
+font-size: 30rpx;
+color: #fff;
+}
+.mask-con span{
+display: block;
+width: 32rpx;
+height: 32rpx;
+color: #888888;
+position: absolute;
+font-size: 52rpx;
+right: 30rpx;
+top: 20rpx;
+}
+  

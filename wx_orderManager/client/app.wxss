@@ -1,0 +1,11 @@
+/**app.wxss**/
+@import 'weui.wxss';
+
+@import 'fontwa.wxss';  
+
+button.btn{
+  width: 92%;
+  height: 90rpx;
+  background: #ff5d42;
+  color: #fff;
+}

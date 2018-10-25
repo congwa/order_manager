@@ -1,0 +1,324 @@
+/* pages/withdraw/withdraw.wxss */
+page{
+    background: #f5f5f5;
+}
+.container{
+  width: 92%;
+  margin:0 auto;
+  background: #fff;
+   color: #333;
+   border-radius: 5rpx;
+}
+.withdraw_title{
+  width: 100%;
+  height: 103rpx;
+  line-height: 103rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+  border-bottom: 1rpx solid #ddd;
+  position: relative;
+ 
+}
+.withdraw_title text{
+  position: absolute;
+   right: 20rpx;
+  color: #47cacc;
+  	font-size: 26rpx;
+}
+.withdraw_con{
+  width: 84%;
+  padding: 30rpx 8%;
+}
+.withdraw_con .con_title{
+  font-size: 26rpx;
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+  margin-bottom: 30rpx;
+}
+.withdraw_con .con_title text,.withdraw_con .con_title view{
+    width: 108rpx;
+    display: block;
+}
+.withdraw_con .con_title view image{
+  width: 26rpx;
+	height: 26rpx;
+  margin-right: 10rpx;
+}
+.withdraw_con .con_title view{
+  font-size: 24rpx;
+	color: #47cacc;
+  display: flex;
+  align-items: center;
+}
+.withdraw_con .mounts_con{
+  width: 100%;
+  border-bottom: 1rpx solid #ddd;
+  padding: 36rpx 0;
+
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.withdraw_con .mounts_con span{
+  font-size:42rpx;
+}
+.withdraw_con .mounts_con input{
+  height: 80rpx;
+  font-size: 76rpx;
+  margin-left: 10rpx;
+}
+.top_info{
+  font-size: 24rpx;
+  color: #333333;
+  margin-top: 38rpx;
+}
+.top_info text{
+  display: inline;
+  color: #999;
+}
+.info{
+  color: #999;
+}
+.info text{
+  color: #47cacc;
+}
+.radio-group{
+  width: 100%;
+}
+.radio-group .radio{
+  width: 100%;
+  font-size: 24rpx;
+	color: #333333;
+  display:block;
+  margin-top: 50rpx;
+}
+.withdraw_btn{
+  width: 100%;
+  border: none;
+  border-radius: 5rpx;
+	background: #ff6b12;
+  color: #fff;
+  font-size: 34rpx;
+  margin: 50rpx 0;
+}
+button[disabled][type=default]{
+   background: #f8bd9a;
+   color: #fff;
+}
+button[type=primary]{
+  background: #fe5d41;
+}
+.info_disable{
+  color: #ff5739;
+}
+.name_con{
+  padding: 10rpx 0;
+}
+.name_info{
+  color: #ff5739;
+}
+.record_con{
+  margin: 20rpx auto;
+  background: #f5f5f5;
+}
+.record_con .record_part{
+   background:#fff;
+  width: 100%;
+  /* height: 202rpx; */
+  padding: 25rpx 20rpx;
+  box-sizing: border-box;
+  border-radius: 5rpx;
+  margin-bottom: 20rpx;
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+}
+.rec_top,.rec_middle,.rec_bottom{
+  width: 100%;
+}
+.rec_middle,.rec_bottom{
+  box-sizing: border-box;
+  padding-left: 30rpx;
+
+}
+.rec_top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rec_top_left{
+   display: flex;
+  align-items: center;
+}
+.rec_top .rec_top_left image{
+  width: 38rpx;
+	height: 38rpx;
+}
+.rec_top .rec_top_left text{
+  font-size: 24rpx;
+	color: #666666;
+  margin-left: 12rpx;
+}
+.rec_top .btn_con{
+  width: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content:flex-end;
+}
+.rec_top .btn_con text{
+	height: 27rpx;
+	line-height: 27rpx;
+  font-size: 28rpx;
+	color: #4bcbcd;
+  border: none;
+  background: none;
+  margin-left: 40rpx;
+}
+.rec_top .btn_con span{
+  font-size: 28rpx;
+	color: #666666;
+}
+.rec_middle text{
+  font-size: 22rpx;
+	color: #999999;
+  margin-right: 50rpx;
+}
+.rec_bottom{
+   display: flex;
+  align-items: center;
+  justify-content:space-between;
+  margin-top: 30rpx;
+}
+.rec_bottom text{
+  font-size:26rpx;
+	color: #169bd5;
+}
+.rec_bottom  span{
+  font-size: 20rpx;
+	color: #999999;
+}
+.r_price{
+  font-size: 30rpx;
+	color: #666666;
+   /* font-weight: bold; */
+}
+.mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+}
+.mask .maskContent{
+  width: 92%;
+  height: 450rpx;
+	background-color: #ffffff;
+	border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.r_right{
+  text-align: right;
+}
+.r_right .r_status{
+  font-size: 28rpx;
+	color: #666666;
+  /* font-weight: bold; */
+}
+.r_right .r_status span{
+  margin-left: 50rpx;
+	color: #47cacc;
+}
+.r_right text{
+  font-size: 26rpx;
+	color: #999999;
+}
+
+.maskContent{
+  width: 690px;
+	height: 600px;
+	background-color: #ffffff;
+	border-radius: 5px;
+  position: relative;
+}
+.maskclose{
+  width: 92%;
+  margin: 30rpx auto;
+  margin-bottom: 0;
+  color:	#888888;
+  font-size: 30rpx;
+  text-align: right;
+}
+.maskContent .title{
+	font-size: 36rpx;
+	color: #333333;
+  width: 87%;
+  margin:30rpx auto;
+  padding-bottom: 30rpx;
+  text-align: center;
+  border-bottom: 1rpx dashed #ddd;
+}
+.maskContent.trueInfo{
+  height: 600rpx;
+}
+.maskContent.trueInfo .title{
+  font-size: 30rpx;
+	color: #999999;
+}
+.maskContent.trueInfo .name{
+  font-size: 32rpx;
+	color: #47cacc;
+  text-align: center;
+}
+.maskContent.trueInfo .input{
+  width: 80%;
+  padding: 40rpx 0;
+  margin: 30rpx auto;
+  border-bottom: 1rpx solid #ddd;
+  text-align: center;
+}
+.maskContent.trueInfo .submit{
+  height: 80rpx;
+  margin-top: 20rpx;
+}
+.maskContent .name{
+    width: 87%;
+    margin:0 auto;
+    font-size: 26rpx;
+    line-height: 40rpx;
+	  color: #999999;
+}
+.maskContent .name  text{
+  font-size: 26rpx;
+	color: #0d97d3;
+}
+
+.cancle .btn_con{
+  width: 88%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.cancle  .btn_con button.btn{
+	width: 280rpx;
+	height: 80rpx;
+	background-color: #169bd5;
+	border-radius: 5px;
+  color: #fff;
+  font-size: 28rpx;
+}
+.cancle  .btn_con button.btn:last-of-type{
+  background-color: #fe5d41;
+}
+.cancle .title{
+  border: none;
+}

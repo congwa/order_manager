@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "二维码",
+    "usingComponents": {
+        "i-spin": "../../../iview/spin/index"
+      }
+}

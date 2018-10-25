@@ -1,0 +1,14 @@
+<!--pages/goodManager/goodManager.wxml-->
+
+<i-toast id="toast" />
+<view class="good">
+    <image class="good-img" src="../../../img/fupenzi.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+        
+    </image>
+    <view class="con" bindtap='goCreat'>
+        <image class="con-img" src="../../../img/plus.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+            
+        </image>
+        <view class="text">添加菜品</view>
+    </view>
+</view>

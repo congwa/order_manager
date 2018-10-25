@@ -1,0 +1,13 @@
+<i-toast id="toast" />
+
+<view class='container'>
+  <view class='register_info'>
+    <text>标题</text>
+     <input type='text' value="{{title}}" bindinput="title" placeholder='请输入标题'></input>
+  </view>
+  <view class='register_info'>
+    <text>排序</text>
+    <input value="{{sort}}" type='number' bindinput="sort" placeholder='0-99 越小越前'></input>
+  </view>
+</view>
+  <button class='btn' bindtap='goWithdraw'>确定</button>

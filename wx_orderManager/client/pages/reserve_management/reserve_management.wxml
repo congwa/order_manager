@@ -1,0 +1,107 @@
+
+<view wx:if="{{loading}}" class="container">
+    <i-spin fix></i-spin>
+</view>
+
+
+<view class='tab_container'>
+  <view class='tab_menu'>
+    <view class="{{curSelect==0?'active':''}}" data-current="0" bindtap="changeSelect">
+      <text>未处理</text>
+    </view>
+    <view class="{{curSelect==1?'active':''}}" data-current="1" bindtap="changeSelect">
+      <text>已接受</text>
+    </view>
+
+  </view>
+  <swiper style="height:{{windowHeight}}rpx" current="{{curSelect}}" duration="300" bindchange="swiperTab">
+    <swiper-item>
+      <!-- 没有已拒绝的 -->
+      <view class="ts-empty" wx:if="{{yData.length == 0}}" >
+        <image class="" src="../../img/empty2.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+        您还没有小橘的订单哦，我们一起努力吧!</view>
+      <view  wx:for="{{yData}}" class="order_part">
+        <view class='order_title'>
+          <span>{{index+1}}</span>
+          <view>
+            <text>订单编号</text>{{item.order_number}} </view>
+          
+        </view>
+        <view class='order_info_con'>
+          <view class='order_info'>
+            <view class='tit'><text></text>订桌</view>
+            <view>
+              <text>预约人 </text>{{item.name}}</view>
+            <view>
+              <text>电   话</text> {{item.phone}} </view>
+            <view>
+              <text>人   数</text>{{item.number}}</view>
+            <view>
+              <text>预约时间</text> {{item.create_time}}</view>
+            <view>
+              <text>备   注</text>{{item.remarks}}</view>        
+           
+            <view>
+              <text>下单时间</text>{{item.reserve_time}}</view>
+          </view>
+        </view>
+        <view class='order_btn_con'>
+           <button data-ordernumber="{{item.order_number}}" bindtap="rejectMask">拒绝</button>
+           <button data-ordernumber="{{item.order_number}}" bindtap="resolve">接受</button>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <!-- 没有已接受的 -->
+      <view class="ts-empty" wx:if="{{nData.length == 0}}" >
+        <image class="" src="../../img/empty1.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+          
+        </image>
+        您还没有小橘的订单哦，我们一起努力吧!</view>
+      <view wx:for="{{nData}}" class="order_part">
+        <view class='order_title'>
+          <span>{{index+1}}</span>
+          <view>
+            <text>订单编号</text>{{item.order_number}} </view>
+          
+        </view>
+        <view class='order_info_con'>
+          <view class='order_info'>
+            <view class='tit'><text></text>订餐</view>
+            <view>
+              <text>预约人 </text>{{item.name}}</view>
+            <view>
+              <text>电   话</text> {{item.phone}} </view>
+            <view>
+              <text>人   数</text>{{item.number}}</view>
+            <view>
+              <text>预约时间</text> {{item.create_time}}</view>
+            <view>
+              <text>备   注</text>{{item.remarks}}</view>        
+           
+            <view>
+              <text>下单时间</text>{{item.reserve_time}}</view>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+
+</view>
+
+
+<view class="mask cancle" wx:if="{{iscancle}}">
+  <view class="maskContent">
+    <view  class="maskclose" bindtap="cancle">X</view>
+    <view class="title">确定：取消</view>
+    <view class='weui-btn-area choose_reason' bindtap='open'>
+      <text>理由</text>
+      <view>{{reason}} <image src='../../img/arrow_up.png'></image></view>
+    </view>
+    <input class='ipt' type='text' wx:if='{{isShow}}' placeholder='请输入原因' bindinput='changeReason'></input>
+    <view class='btn_con'>
+      <button bindtap="reject" class='btn'>确定</button>
+      <button class='btn' bindtap="cancle">取消</button>
+    </view>
+  </view>
+</view>

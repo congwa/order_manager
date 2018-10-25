@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "优惠券",
+  "navigationBarBackgroundColor": "#323a45",
+  "usingComponents": {
+    "i-spin": "../../../iview/spin/index"
+  }
+}

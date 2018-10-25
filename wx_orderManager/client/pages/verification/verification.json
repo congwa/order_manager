@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "navigationBarTitleText": "核销",
+  "usingComponents": {
+    "i-toast": "../../iview/toast/index"
+  }
+}

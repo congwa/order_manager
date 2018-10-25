@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "navigationBarTitleText": "添加菜品",
+  "usingComponents": {
+    "i-toast": "../../../iview/toast/index",
+    "i-spin": "../../../iview/spin/index"
+  }
+}

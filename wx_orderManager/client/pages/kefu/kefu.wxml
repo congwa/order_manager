@@ -1,0 +1,1 @@
+<button bindtap='formcode'>生成二维码</button>

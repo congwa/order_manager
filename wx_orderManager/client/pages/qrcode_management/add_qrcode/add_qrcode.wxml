@@ -1,0 +1,35 @@
+
+<i-toast id="toast" />
+
+<view class='container'>
+  <view class='register_info'>
+    <text>桌号</text>
+    <input type='text' maxlength="3" placeholder='请输入桌号' bindinput="setNumber"></input>
+  </view>
+   <view class='register_info'>
+    <text>模板</text>
+    <view class="section">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{sortList}}">
+        <view class="picker">
+          {{sortList[index]}}
+        </view>
+      </picker>
+    </view>
+    <image class='arrow'   src='../../../img/arrow_up.png'></image>
+  </view>
+  <view class='mode'>
+    <text>桌贴模板</text>
+    <view class='qrcod_con'>
+       <view class='img_con'>
+          <image src='{{list[index].demo}}'></image>
+          <!-- <image src='{{list[index].resource}}'></image> -->
+       </view>   
+       <span>建议打印尺寸{{list[index].width}}×{{list[index].height}}mm</span>
+    </view>
+  </view>
+</view>
+<!-- <canvas style="width: 200px; height: 200px;" width="1913px" height="1346px" canvas-id="myQrcode"></canvas>
+<canvas style="width: 300px; height: 200px;" width="1913px" height="1346px" canvas-id="code"></canvas> -->
+
+<!-- <button wx:if="{{!qrCode}}" class='sub_info ' bindtap='goEdit'>生成二维码</button> -->
+<button class='sub_info ' bindtap='submit'>提交</button>
